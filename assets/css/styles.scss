@@ -444,6 +444,18 @@ img {
 
             }
         }
+        .arrow-fixed{
+            img{
+                @media (min-width: 1860px) {
+                    width: 150px;
+                    height: 60px;
+                }
+    
+                @media (max-width: 1700px) {
+                    width: 95px;
+                }
+            }
+        }
     }
 
     #main-home {
@@ -463,128 +475,6 @@ img {
                 font: 45px "Pradell Bold";
             }
 
-            .call-to-actions-items {
-                height: 100%;
-
-                span {
-                    display: block;
-
-                    &:first-child {
-                        font: 18px "Brandon Bold";
-                        position: relative;
-
-                        @media (min-width: 1860px) {
-                            font: 26px "Brandon Bold";
-                        }
-
-                        &::after {
-                            content: "";
-                            width: 68%;
-                            height: 2px;
-                            display: block;
-                            margin: 5px auto;
-                            background-color: $white;
-                        }
-                    }
-
-                    &:last-child {
-                        @media (min-width: 1860px) {
-                            font: 22px "Pradell SemiBold";
-                        }
-
-                        font: 14px "Pradell SemiBold";
-                    }
-                }
-
-                .item-1 {
-                    background-color: map-get($theme-colors , secondary);
-                    border: 3px solid $white;
-                    padding: 5px 25px;
-                    margin: 10px 0;
-                    position: absolute;
-                    top: 40px;
-                    right: 50px;
-                    transform: rotate(5deg);
-
-                    &,
-                    a {
-                        color: $white;
-                    }
-                }
-
-                .item-2 {
-                    background-color: map-get($theme-colors , primary);
-                    border: 2px solid $white;
-                    padding: 5px;
-                    margin: 10px 0;
-                    position: absolute;
-                    top: 130px;
-
-                    @media (min-width: 1860px) {
-                        top: 170px;
-                    }
-
-                    right: 85px;
-                    transform: rotate(11deg);
-
-                    &,
-                    a {
-                        color: $white;
-                    }
-                }
-
-                .item-3 {
-                    background-color: $white;
-                    border-top: 2px solid $black;
-                    border-bottom: 2px solid $black;
-                    padding: 5px;
-                    margin: 10px 0;
-                    position: absolute;
-                    top: calc(100% - 150px);
-
-                    @media (min-width: 1860px) {
-                        top: 75vh;
-                    }
-
-                    right: 85px;
-
-                    &::before,
-                    &::after {
-                        content: "";
-                        width: 8px;
-                        height: 8px;
-                        background-color: $black;
-                        border-radius: 20px;
-                        position: absolute;
-                        left: 50%;
-                    }
-
-                    &::before {
-                        top: -5px;
-                    }
-
-                    &::after {
-                        bottom: -5px;
-                    }
-
-                    &,
-                    a {
-                        color: $black;
-                    }
-
-                    span {
-                        font: 18px "Brandon Bold";
-
-                        @media (min-width: 1860px) {
-                            font: 26px "Brandon Bold";
-                        }
-
-                        &::after {
-                            content: none;
-                        }
-                    }
-                }
-            }
         }
 
     }
@@ -597,7 +487,7 @@ img {
             align-items: center;
             flex-direction: row;
             justify-content: flex-end;
-            max-width: 86%;
+            max-width: 76%;
 
             @media (max-width: 1100px) {
                 max-width: 86%;
@@ -643,12 +533,12 @@ img {
             transition: map_get($transition, main);
 
             @media (min-width: 1860px) {
-                width: 150px;
-                height: 60px;
+                width: 94px;
+                height: auto;
             }
 
-            @media (max-width: 1440px) {
-                width: 95px;
+            @media (max-width: 1700px) {
+                width: 85px;
             }
 
         }
@@ -659,7 +549,133 @@ img {
             }
         }
     }
+    #main-home,
+    .main-projects{
 
+        .call-to-actions-items {
+            height: 100%;
+
+            span {
+                display: block;
+
+                &:first-child {
+                    font: 18px "Brandon Bold";
+                    position: relative;
+
+                    @media (min-width: 1860px) {
+                        font: 26px "Brandon Bold";
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 68%;
+                        height: 2px;
+                        display: block;
+                        margin: 5px auto;
+                        background-color: $white;
+                    }
+                }
+
+                &:last-child {
+                    @media (min-width: 1860px) {
+                        font: 22px "Pradell SemiBold";
+                    }
+
+                    font: 14px "Pradell SemiBold";
+                }
+            }
+
+            .cta-1 {
+                background-color: map-get($theme-colors , secondary);
+                border: 3px solid $white;
+                padding: 5px 25px;
+                margin: 10px 0;
+                position: absolute;
+                top: 40px;
+                right: 50px;
+                transform: rotate(5deg);
+
+                &,
+                a {
+                    color: $white;
+                }
+            }
+
+            .cta-2 {
+                background-color: map-get($theme-colors , primary);
+                border: 2px solid $white;
+                padding: 5px;
+                margin: 10px 0;
+                position: absolute;
+                top: 130px;
+
+                @media (min-width: 1860px) {
+                    top: 170px;
+                }
+
+                right: 85px;
+                transform: rotate(11deg);
+
+                &,
+                a {
+                    color: $white;
+                }
+            }
+
+            .cta-3 {
+                background-color: $white;
+                border-top: 2px solid $black;
+                border-bottom: 2px solid $black;
+                padding: 5px;
+                margin: 10px 0;
+                position: absolute;
+                top: calc(100% - 150px);
+
+                @media (min-width: 1860px) {
+                    top: 75vh;
+                }
+
+                right: 85px;
+
+                &::before,
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background-color: $black;
+                    border-radius: 20px;
+                    position: absolute;
+                    left: 50%;
+                }
+
+                &::before {
+                    top: -5px;
+                }
+
+                &::after {
+                    bottom: -5px;
+                }
+
+                &,
+                a {
+                    color: $black;
+                }
+
+                span {
+                    font: 18px "Brandon Bold";
+
+                    @media (min-width: 1860px) {
+                        font: 26px "Brandon Bold";
+                    }
+
+                    &::after {
+                        content: none;
+                    }
+                }
+            }
+        }
+    }
+    
     .text-overlay {
 
         .img-wrap {
@@ -743,32 +759,32 @@ img {
         }
 
         @media (min-width:1860px) {
-            font: 21px/26px "Pradell";
+            font: 20px/24px "Pradell";
         }
     }
 
     .Libre-font {
-        font: 15px/23px "Libre Baskerville Italic";
+        font: 15px"Libre Baskerville Italic";
 
 
         @media (max-width:1100px) {
-            font: 13px/22px "Libre Baskerville Italic";
+            font: 13px "Libre Baskerville Italic";
         }
 
         @media (min-width:1860px) {
-            font: 16px/24px "Libre Baskerville Italic";
+            font: 16px "Libre Baskerville Italic";
         }
     }
 
     .Brandon-font-bold {
-        font: 18px/23px "Brandon Bold";
+        font: 18px "Brandon Bold";
 
         @media (max-width:1100px) {
-            font: 16px/22px "Brandon Bold";
+            font: 16px "Brandon Bold";
         }
 
         @media (min-width:1860px) {
-            font: 20px/24px "Brandon Bold";
+            font: 20px "Brandon Bold";
         }
     }
 
@@ -779,8 +795,13 @@ img {
         background-color: #f4f4ef;
         display: flex;
         min-height: calc(100% - 46px);
-        column-gap: 20px;
-
+        column-gap: 30px;
+        @media (max-width: 1100px) {
+            column-gap: 25px;
+        }
+        @media (min-width: 1860px) {
+            column-gap: 45px;
+        }
         .col-img {
             max-height: 794px;
             flex: 0 0 42%;
@@ -801,7 +822,9 @@ img {
         }
 
         .col-menu {
-            align-self: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             max-height: 774px;
             text-align: center;
             flex: 0 0 19%;
@@ -829,14 +852,17 @@ img {
                 padding-bottom: 12px;
                 margin-bottom: 12px;
                 display: inline-block;
-
+                margin-right: auto;
+                margin-left: auto;
             }
 
             .rutas-menu {
                 li {
                     a {
                         font: 19px/30px "Brandon Medium";
-
+                        color: $black;
+                        border-bottom: 2px solid transparent;
+                        transition: map-get($transition, secondary );
                         @media (max-width: 1100px) {
                             font: 18px/30px "Brandon Medium";
                         }
@@ -844,8 +870,9 @@ img {
                         @media (min-width: 1860px) {
                             font: 26px/40px "Brandon Medium";
                         }
-
-                        color: $black;
+                        &:hover{
+                            border-bottom-color: $black;
+                        }
                     }
                 }
 
@@ -907,14 +934,12 @@ img {
         background-color: #f4f4ef;
         display: flex;
         min-height: calc(100% - 46px);
-        column-gap: 15px;
-
+        column-gap: 30px;
         @media (max-width: 1100px) {
-            column-gap: 15px;
+            column-gap: 25px;
         }
-
         @media (min-width: 1860px) {
-            column-gap: 30px;
+            column-gap: 45px;
         }
 
         .col-imgs-grid {
@@ -941,8 +966,8 @@ img {
                 flex: 0 0 calc(50% - 10px);
 
                 @media (max-width: 1100px) {
-                    width: 328px;
-                    height: 210px;
+                    width: 300px;
+                    height: auto;
                     flex: 0 0 calc(50% - 5px);
                 }
 
@@ -1022,16 +1047,20 @@ img {
                 >li {
 
                     position: relative;
-                    font: 12px/48px "Brandon Medium";
+                    font: 12px "Brandon Medium";
+                    height: 48px;
                     padding: 0 4px;
-
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
                     @media (max-width: 1100px) {
-                        font: 12px/48px "Brandon Medium";
+                        font: 11px "Brandon Medium";
                         padding: 0 10px;
+                        height: 40px;
                     }
 
                     @media (min-width: 1860px) {
-                        font: 16px/48px "Brandon Medium";
+                        font: 16px "Brandon Medium";
                         padding: 0 15px;
                     }
 
@@ -1222,11 +1251,49 @@ img {
                 img {
                     filter: invert(23%);
                     height: auto;
-
-                    @media (min-width: 1860px) {
-                        width: 110px;
+                    &:hover {
+                        img {
+                            filter: invert(50%);
+                        }
                     }
                 }
+            }
+        }
+        .call-to-actions-items{
+             
+            .cta-1{
+                padding: 5px 0;
+                width: 235px;
+                right: 40px;
+                top: 30px;
+            }
+            span:first-child {
+                font: 19px "Brandon Bold";
+            }
+            span:last-child {
+                font: 16px "Pradell SemiBold";
+            }
+            .cta-2{
+                padding: 5px 0;
+                width: 141px;
+                top:50px
+            }
+            .cta-logo{
+                position: absolute;
+                right: 35px;
+                width: 112px;
+                height: 112px;
+                top: 145px;
+                img{
+                    width: 100%;
+                    height:100%;
+                    object-fit: contain;
+                }
+            }
+            .cta-3{
+                width: 140px;
+                height: 60px;
+                top: 40px;
             }
         }
     }
@@ -1270,11 +1337,11 @@ img {
         height: auto;
 
         @media (max-width: 1800px) {
-            height: 700px;
+            height: 70vh;
         }
 
         @media (max-width: 1100px) {
-            height: 574px;
+            height: 65vh;
         }
 
         @media (min-width: 1860px) {
@@ -1288,11 +1355,11 @@ img {
             height: auto;
 
             @media (max-width: 1800px) {
-                height: 700px;
+                height: 70vh;
             }
 
             @media (max-width: 1100px) {
-                height: 574px;
+                height: 65vh;
             }
 
             @media (min-width: 1860px) {
