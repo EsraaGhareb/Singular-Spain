@@ -11,7 +11,8 @@ $theme-colors: (
 );
 $transition: (
     main: all 0.4s ease,
-    secondary: all 0.3s ease
+    secondary: all 0.3s ease,
+    primary: right 1s ease-out,
 );
 
 @font-face {
@@ -115,11 +116,13 @@ ul {
 
 img {
     max-width: 100%;
+    object-fit: cover;
 }
 
 .main-wrapper {
     overflow-x: hidden;
     min-height: 100vh;
+    background-color: #f4f4ef;
 }
 
 #projects-wrapper {
@@ -133,7 +136,7 @@ img {
     padding: 0 24px;
     height: 46px;
     position: relative;
-    z-index: 4;
+    z-index: 7;
 
     @media (max-width: 1100px) {
         padding: 0 18px;
@@ -150,7 +153,7 @@ img {
     .navbar {
         padding: 0;
         height: 46px;
-        z-index: 4;
+        z-index: 7;
 
         .social-menu {
             margin-right: 1.3rem;
@@ -425,6 +428,7 @@ img {
             left: 0;
             height: 100%;
             width: 100%;
+            padding-top: 46px;
 
             .site-logo {
                 position: absolute;
@@ -444,9 +448,31 @@ img {
 
             }
         }
+
+        .arrow-fixed {
+            img {
+                @media (min-width: 1860px) {
+                    width: 150px;
+                    height: 60px;
+                }
+
+                @media (max-width: 1700px) {
+                    width: 95px;
+                }
+            }
+        }
     }
 
     #main-home {
+        z-index: 4;
+        height: 100vh;
+        position: relative;
+        margin-top: -46px;
+
+        &.layered-home {
+            z-index: 5;
+        }
+
         .section-overlay {
             padding: 0 70px;
             display: flex;
@@ -463,133 +489,30 @@ img {
                 font: 45px "Pradell Bold";
             }
 
-            .call-to-actions-items {
-                height: 100%;
-
-                span {
-                    display: block;
-
-                    &:first-child {
-                        font: 18px "Brandon Bold";
-                        position: relative;
-
-                        @media (min-width: 1860px) {
-                            font: 26px "Brandon Bold";
-                        }
-
-                        &::after {
-                            content: "";
-                            width: 68%;
-                            height: 2px;
-                            display: block;
-                            margin: 5px auto;
-                            background-color: $white;
-                        }
-                    }
-
-                    &:last-child {
-                        @media (min-width: 1860px) {
-                            font: 22px "Pradell SemiBold";
-                        }
-
-                        font: 14px "Pradell SemiBold";
-                    }
-                }
-
-                .item-1 {
-                    background-color: map-get($theme-colors , secondary);
-                    border: 3px solid $white;
-                    padding: 5px 25px;
-                    margin: 10px 0;
-                    position: absolute;
-                    top: 40px;
-                    right: 50px;
-                    transform: rotate(5deg);
-
-                    &,
-                    a {
-                        color: $white;
-                    }
-                }
-
-                .item-2 {
-                    background-color: map-get($theme-colors , primary);
-                    border: 2px solid $white;
-                    padding: 5px;
-                    margin: 10px 0;
-                    position: absolute;
-                    top: 130px;
-
-                    @media (min-width: 1860px) {
-                        top: 170px;
-                    }
-
-                    right: 85px;
-                    transform: rotate(11deg);
-
-                    &,
-                    a {
-                        color: $white;
-                    }
-                }
-
-                .item-3 {
-                    background-color: $white;
-                    border-top: 2px solid $black;
-                    border-bottom: 2px solid $black;
-                    padding: 5px;
-                    margin: 10px 0;
-                    position: absolute;
-                    top: calc(100% - 150px);
-
-                    @media (min-width: 1860px) {
-                        top: 75vh;
-                    }
-
-                    right: 85px;
-
-                    &::before,
-                    &::after {
-                        content: "";
-                        width: 8px;
-                        height: 8px;
-                        background-color: $black;
-                        border-radius: 20px;
-                        position: absolute;
-                        left: 50%;
-                    }
-
-                    &::before {
-                        top: -5px;
-                    }
-
-                    &::after {
-                        bottom: -5px;
-                    }
-
-                    &,
-                    a {
-                        color: $black;
-                    }
-
-                    span {
-                        font: 18px "Brandon Bold";
-
-                        @media (min-width: 1860px) {
-                            font: 26px "Brandon Bold";
-                        }
-
-                        &::after {
-                            content: none;
-                        }
-                    }
-                }
-            }
         }
 
     }
 
     #main-hola {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        right: 100%;
+        transition: map_get($transition, primary);
+        z-index: 2;
+
+        &.animated {
+            right: 0;
+            z-index: 4;
+        }
+
+        &.extrnal-animate {
+            right: 0;
+            left: 0;
+            z-index: 4;
+        }
+
         .section-overlay {
             font: 28px/40px "Libre Baskerville Italic";
             padding: 0 70px;
@@ -597,14 +520,16 @@ img {
             align-items: center;
             flex-direction: row;
             justify-content: flex-end;
-            max-width: 86%;
+            max-width: 76%;
 
             @media (max-width: 1100px) {
                 max-width: 86%;
             }
-            @media (min-width: 1860px) { 
+
+            @media (min-width: 1860px) {
                 max-width: 75%;
             }
+
             .text-overlay {
                 max-width: 370px;
                 font: 20px/30px "Libre Baskerville Italic";
@@ -628,7 +553,7 @@ img {
         top: calc(50vh - 7px);
         right: 40px;
 
-        @media (max-width: 1100px) {
+        @media (max-width: 1200px) {
             right: 25px;
         }
 
@@ -643,12 +568,12 @@ img {
             transition: map_get($transition, main);
 
             @media (min-width: 1860px) {
-                width: 150px;
-                height: 60px;
+                width: 94px;
+                height: auto;
             }
 
-            @media (max-width: 1440px) {
-                width: 95px;
+            @media (max-width: 1700px) {
+                width: 85px;
             }
 
         }
@@ -656,6 +581,137 @@ img {
         &:hover {
             img {
                 filter: invert(23%);
+            }
+        }
+    }
+
+    #main-home,
+    .main-projects {
+
+        .call-to-actions-items {
+            height: 100%;
+
+            span {
+                display: block;
+
+                &:first-child {
+                    font: 18px "Brandon Bold";
+                    position: relative;
+
+                    @media (min-width: 1860px) {
+                        font: 26px "Brandon Bold";
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 68%;
+                        height: 2px;
+                        display: block;
+                        margin: 5px auto;
+                        background-color: $white;
+                    }
+                }
+
+                &:last-child {
+                    @media (min-width: 1860px) {
+                        font: 22px "Pradell SemiBold";
+                    }
+
+                    font: 14px "Pradell SemiBold";
+                }
+            }
+
+            .cta-1 {
+                background-color: map-get($theme-colors , secondary);
+                border: 3px solid $white;
+                padding: 5px 25px;
+                margin: 10px 0;
+                position: absolute;
+                top: 86px;
+                right: 50px;
+                transform: rotate(5deg);
+                cursor: pointer;
+
+                &,
+                a {
+                    color: $white;
+                }
+
+            }
+
+            .cta-2 {
+                background-color: map-get($theme-colors , primary);
+                border: 2px solid $white;
+                padding: 5px;
+                margin: 10px 0;
+                position: absolute;
+                top: 176px;
+                cursor: pointer;
+
+                @media (min-width: 1860px) {
+                    top: 216px;
+                }
+
+                right: 85px;
+                transform: rotate(11deg);
+
+                &,
+                a {
+                    color: $white;
+                }
+            }
+
+            .cta-3 {
+                background-color: $white;
+                border-top: 2px solid $black;
+                border-bottom: 2px solid $black;
+                padding: 5px;
+                margin: 10px 0;
+                position: absolute;
+                top: calc(100% - 150px);
+                cursor: pointer;
+
+                @media (min-width: 1860px) {
+                    top: 85vh;
+                }
+
+                right: 85px;
+
+                &::before,
+                &::after {
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background-color: $black;
+                    border-radius: 20px;
+                    position: absolute;
+                    left: 50%;
+                }
+
+                &::before {
+                    top: -5px;
+                }
+
+                &::after {
+                    bottom: -5px;
+                }
+
+                &,
+                a {
+                    color: $black;
+                }
+
+                span {
+                    font: 18px "Brandon Bold";
+
+                    @media (min-width: 1860px) {
+                        font: 26px "Brandon Bold";
+                    }
+
+                    &::after {
+                        content: none;
+                    }
+                }
             }
         }
     }
@@ -743,32 +799,32 @@ img {
         }
 
         @media (min-width:1860px) {
-            font: 21px/26px "Pradell";
+            font: 20px/24px "Pradell";
         }
     }
 
     .Libre-font {
-        font: 15px/23px "Libre Baskerville Italic";
+        font: 15px"Libre Baskerville Italic";
 
 
         @media (max-width:1100px) {
-            font: 13px/22px "Libre Baskerville Italic";
+            font: 13px "Libre Baskerville Italic";
         }
 
         @media (min-width:1860px) {
-            font: 16px/24px "Libre Baskerville Italic";
+            font: 16px "Libre Baskerville Italic";
         }
     }
 
     .Brandon-font-bold {
-        font: 18px/23px "Brandon Bold";
+        font: 18px "Brandon Bold";
 
         @media (max-width:1100px) {
-            font: 16px/22px "Brandon Bold";
+            font: 16px "Brandon Bold";
         }
 
         @media (min-width:1860px) {
-            font: 20px/24px "Brandon Bold";
+            font: 20px "Brandon Bold";
         }
     }
 
@@ -779,7 +835,15 @@ img {
         background-color: #f4f4ef;
         display: flex;
         min-height: calc(100% - 46px);
-        column-gap: 20px;
+        column-gap: 30px;
+
+        @media (max-width: 1100px) {
+            column-gap: 25px;
+        }
+
+        @media (min-width: 1860px) {
+            column-gap: 45px;
+        }
 
         .col-img {
             max-height: 794px;
@@ -801,9 +865,11 @@ img {
         }
 
         .col-menu {
-            align-self: center;
-            max-height: 774px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             text-align: center;
+            max-height: 80vh;
             flex: 0 0 19%;
 
             @media (max-width: 1100px) {
@@ -812,6 +878,7 @@ img {
 
             @media (min-width: 1860px) {
                 flex: 0 0 295px;
+                max-height: 774px;
             }
 
             .title {
@@ -829,13 +896,17 @@ img {
                 padding-bottom: 12px;
                 margin-bottom: 12px;
                 display: inline-block;
-
+                margin-right: auto;
+                margin-left: auto;
             }
 
             .rutas-menu {
                 li {
                     a {
                         font: 19px/30px "Brandon Medium";
+                        color: $black;
+                        border-bottom: 2px solid transparent;
+                        transition: map-get($transition, secondary);
 
                         @media (max-width: 1100px) {
                             font: 18px/30px "Brandon Medium";
@@ -845,7 +916,9 @@ img {
                             font: 26px/40px "Brandon Medium";
                         }
 
-                        color: $black;
+                        &:hover {
+                            border-bottom-color: $black;
+                        }
                     }
                 }
 
@@ -907,14 +980,14 @@ img {
         background-color: #f4f4ef;
         display: flex;
         min-height: calc(100% - 46px);
-        column-gap: 15px;
+        column-gap: 30px;
 
         @media (max-width: 1100px) {
-            column-gap: 15px;
+            column-gap: 25px;
         }
 
         @media (min-width: 1860px) {
-            column-gap: 30px;
+            column-gap: 45px;
         }
 
         .col-imgs-grid {
@@ -937,12 +1010,18 @@ img {
             .grid-col {
 
                 width: 330px;
-                height: 250px;
+                height: 210px;
                 flex: 0 0 calc(50% - 10px);
 
+                a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+
                 @media (max-width: 1100px) {
-                    width: 328px;
-                    height: 210px;
+                    width: 300px;
+                    height: auto;
                     flex: 0 0 calc(50% - 5px);
                 }
 
@@ -1022,16 +1101,22 @@ img {
                 >li {
 
                     position: relative;
-                    font: 12px/48px "Brandon Medium";
+                    font: 12px "Brandon Medium";
+                    height: 48px;
                     padding: 0 4px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    cursor: pointer;
 
                     @media (max-width: 1100px) {
-                        font: 12px/48px "Brandon Medium";
+                        font: 11px "Brandon Medium";
                         padding: 0 10px;
+                        height: 40px;
                     }
 
                     @media (min-width: 1860px) {
-                        font: 16px/48px "Brandon Medium";
+                        font: 16px "Brandon Medium";
                         padding: 0 15px;
                     }
 
@@ -1223,10 +1308,78 @@ img {
                     filter: invert(23%);
                     height: auto;
 
-                    @media (min-width: 1860px) {
-                        width: 110px;
+                    &:hover {
+                        img {
+                            filter: invert(50%);
+                        }
                     }
                 }
+            }
+        }
+
+        .call-to-actions-items {
+
+            .cta-1 {
+                padding: 5px 0;
+                width: 160px;
+                right: 15px;
+                top: 30px;
+
+                @media (min-width: 1440px) {
+                    width: 235px;
+                    right: 40px;
+                }
+            }
+
+            span:first-child {
+                font: 14px "Brandon Bold";
+
+                @media (min-width: 1440px) {
+                    font: 19px "Brandon Bold";
+                }
+            }
+
+            span:last-child {
+
+                font: 13px "Pradell SemiBold";
+
+                @media (min-width: 1440px) {
+                    font: 16px "Pradell SemiBold";
+                }
+            }
+
+            .cta-2 {
+                padding: 5px 0;
+                width: 111px;
+                top: 50px;
+                @media (min-width: 1440px) {
+                    width: 141px;
+                }
+            }
+
+            .cta-logo {
+                position: absolute;
+                right: 15px;
+                width: 95px;
+                height: 95px;
+                top: 145px;
+                cursor: pointer;
+                @media (min-width: 1440px) {
+                    right: 35px;
+                    width: 112px;
+                    height: 112px;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+
+            .cta-3 {
+                width: 140px;
+                height: 60px;
+                top: 40px;
             }
         }
     }
@@ -1268,44 +1421,25 @@ img {
         border-radius: 0 !important;
         padding: 0 !important;
         height: auto;
-
-        @media (max-width: 1800px) {
-            height: 700px;
-        }
-
-        @media (max-width: 1100px) {
-            height: 574px;
-        }
-
-        @media (min-width: 1860px) {
-            height: 774px;
-        }
+        width: auto !important;
+        margin: auto ;
+        
 
         .modal-body {
-            border: 20px solid $white !important;
+           
             padding: 0 !important;
             position: relative;
             height: auto;
-
-            @media (max-width: 1800px) {
-                height: 700px;
-            }
-
-            @media (max-width: 1100px) {
-                height: 574px;
-            }
-
-            @media (min-width: 1860px) {
-                height: 774px;
-            }
+            width: auto;
+           
 
             .caption {
                 color: $white;
                 margin: 0;
                 font: 13px "Brandon Medium";
                 position: absolute;
-                left: 30px;
-                bottom: 25px;
+                left: 35px;
+                bottom: 35px;
             }
         }
     }
@@ -1314,5 +1448,17 @@ img {
         display: block;
         width: 100%;
         height: 100%;
+        border: 20px solid $white !important;
+        @media (max-width: 1800px) {
+            max-height: 70vh;
+        }
+
+        @media (max-width: 1100px) {
+            max-height: 50vh;
+        }
+
+        @media (min-width: 1860px) {
+            height: 774px;
+        }
     }
 }
