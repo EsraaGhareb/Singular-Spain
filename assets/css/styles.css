@@ -11509,6 +11509,8 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+#main-content .main-projects .col-menu .project-menu > li span {
   cursor: pointer;
 }
 @media (max-width: 1100px) {

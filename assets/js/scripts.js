@@ -66,7 +66,6 @@ $(document).ready(function () {
   // if user back to main-home form hola
   $(document).on("click", ".navbar-brand", function () {
     $("#main-home").removeClass("opacity-0").addClass("layered-home");
-    $("#main-hola").removeClass("animated").removeClass("extrnal-animate");
     $("#hola").removeClass("active");
   });
 
