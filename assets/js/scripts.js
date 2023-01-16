@@ -34,6 +34,10 @@ $(document).ready(function () {
   $(document).on("click", ".search-blk .search-icon.active", function () {
     $(this).removeClass("active").parents(".search-blk").find("input").val("");
   });
+  $(document).on("click", ".search-blk .search-mobile", function () {
+    $(this).parents(".search-blk").find("input").toggleClass("d-none");
+    $(this).parents(".search-blk").find(".search-icon").toggleClass("d-none");
+  });
 
   if (window.location.hash == "#main-hola") {
     $("#main-hola").addClass("extrnal-animate");
@@ -44,9 +48,9 @@ $(document).ready(function () {
     $("#hola").addClass("active");
     // if user clicked hola from home
     if ($("#main-home").length) {
-      setTimeout(function () {
+      // setTimeout(function () {
       $("#main-hola").addClass("animated");
-      }, 400);
+      // }, 400);
       $("#main-home").removeClass("layered-home");
     } else {
       $("#main-home").addClass("opacity-0");
@@ -57,15 +61,14 @@ $(document).ready(function () {
   $("#main-home .arrow-fixed a").on("click", function () {
     let section_id = $(this).attr("href");
     $("#hola").addClass("active");
-    setTimeout(function () {
+    // setTimeout(function () {
     $(section_id).addClass("animated");
-    }, 400);
+    // }, 400);
     $("#main-home").removeClass("layered-home");
   });
 
   // if user back to main-home form hola
   $(document).on("click", ".navbar-brand", function () {
-    $("#main-home").removeClass("opacity-0").addClass("layered-home");
     $("#hola").removeClass("active");
   });
 

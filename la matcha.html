@@ -11,7 +11,7 @@
   <body>
     <div class="main-wrapper" id="projects-wrapper">
       <header id="main-header" data-aos="fade" data-aos-delay="300">
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg navbar-dark">
           <ul class="social-menu d-flex list-unstyled my-0">
             <li>
               <a href="#">
@@ -45,11 +45,19 @@
             </li>
           </ul>
 
-          <a class="navbar-brand p-0" href="index.html">
-            Singular Spain
-          </a>
-
-          <div class="navbar-collapse" id="navbarSupportedContent">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand p-0" href="index.html"> Singular Spain </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
               <li class="nav-item" id="hola">
                 <a class="nav-link" href="index.html#main-hola">Hola</a>
@@ -60,7 +68,7 @@
                 </ul>
               </li>
               <li class="nav-item" id="rutas">
-                <a class="nav-link" href="#">RUTAS</a>
+                <a class="nav-link" href="la rutas.html">RUTAS</a>
                 <ul class="sub-menu">
                   <li class="nav-item">
                     <a href="la rutas.html">Las Rutas</a>
@@ -96,13 +104,22 @@
               <li class="nav-item" id="Cuaderno">
                 <a class="nav-link last-child" href="#">Cuaderno de Campo</a>
               </li>
+              <li class="nav-item d-lg-none">
+                <a class="lang-trigger"> ENG</a> ,
+                <a class="lang-trigger"> FRA</a>
+              </li>
             </ul>
           </div>
           <div class="search-blk">
-            <input type="text" placeholder="Buscar" />
-            <button class="search-icon" type="button"></button>
+            <button class="search-mobile d-lg-none" type="button"></button>
+            <input type="text" placeholder="Buscar" class="d-lg-block d-none" />
+            <button
+              class="search-icon d-lg-block d-none"
+              type="button"
+            ></button>
           </div>
-          <div class="lang-blk">
+
+          <div class="lang-blk d-lg-block d-none">
             <a class="lang-trigger current-lang"> ESP</a>
             <a class="lang-trigger"> ENG</a>
             <a class="lang-trigger"> FRA</a>
@@ -112,92 +129,133 @@
 
       <main id="main-content">
         <section class="main-projects">
-          <section class="col-imgs-grid">
-            <div class="grid-col">
+          <section class="col-mobile d-md-none d-block">
+            <div class="text-overlay">
+              <div class="fleuron-wrap">
+                <img
+                  src="assets/images/black-leaf.png"
+                  class="lazyload icon-leaf"
+                  alt=""
+                />
+              </div>
+              <h4 class="title text-center mb-4">
+                VIAJE AL CORAZÓN DE LA MANCHA
+              </h4>
               <a
-                data-img="assets/images/la-matcha-p1.png"
-                data-caption="© Adolfo Maidán / France Press"
-                class="openImgModal"
+                href="https://maps.google.com"
+                target="_blank"
+                class="project-map mx-auto"
               >
                 <img
-                  src="assets/images/la-matcha-p1.png"
-                  data-src="assets/images/la-matcha-p1.png"
+                  src="assets/images/la-matcha-map.png"
+                  data-src="assets/images/la-matcha-map.png"
                   class="lazyload"
-                  alt="la matcha img"
-              /></a>
-            </div>
-            <div class="grid-col">
-              <a
-                data-img="assets/images/la-matcha-p2.png"
-                data-caption="© Adolfo Maidán / France Press"
-                class="openImgModal"
-              >
-                <img
-                  src="assets/images/la-matcha-p2.png"
-                  data-src="assets/images/la-matcha-p2.png"
-                  class="lazyload"
-                  alt="la matcha img"
-              /></a>
-            </div>
-            <div class="grid-col">
-              <a
-                data-img="assets/images/la-matcha-p3.png"
-                data-caption="© Adolfo Maidán / France Press"
-                class="openImgModal"
-              >
-                <img
-                  src="assets/images/la-matcha-p3.png"
-                  data-src="assets/images/la-matcha-p3.png"
-                  class="lazyload"
-                  alt="la matcha img"
-              /></a>
-            </div>
-            <div class="grid-col">
-              <a
-                data-img="assets/images/la-matcha-p4.png"
-                data-caption="© Adolfo Maidán / France Press"
-                class="openImgModal"
-              >
-                <img
-                  src="assets/images/la-matcha-p4.png"
-                  data-src="assets/images/la-matcha-p4.png"
-                  class="lazyload"
-                  alt="la matcha img"
-              /></a>
-            </div>
-            <div class="grid-col">
-              <a
-                data-img="assets/images/la-matcha-p1.png"
-                data-caption="© Adolfo Maidán / France Press"
-                class="openImgModal"
-              >
-                <img
-                  src="assets/images/la-matcha-p1.png"
-                  data-src="assets/images/la-matcha-p1.png"
-                  class="lazyload"
-                  alt="la matcha img"
-              /></a>
-            </div>
-            <div class="grid-col">
-              <a
-                data-img="assets/images/la-matcha-p5.png"
-                data-caption="© Adolfo Maidán / France Press"
-                class="openImgModal"
-              >
-                <img
-                  src="assets/images/la-matcha-p5.png"
-                  data-src="assets/images/la-matcha-p5.png"
-                  class="lazyload"
-                  alt="la matcha img"
+                  alt="La matcha Map"
                 />
               </a>
+            </div>
+          </section>
+          <section class="col-imgs-grid">
+            <!--  -->
+            <div class="text-overlay d-lg-none d-md-block d-none">
+              <div class="fleuron-wrap">
+                <img
+                  src="assets/images/black-leaf.png"
+                  class="lazyload icon-leaf"
+                  alt=""
+                />
+              </div>
+              <h4 class="title text-center mb-4">
+                VIAJE AL CORAZÓN DE LA MANCHA
+              </h4>
+            </div>
+            <div class="imgs-grid-wrapper">
+              <div class="grid-col">
+                <a
+                  data-img="assets/images/la-matcha-p1.png"
+                  data-caption="© Adolfo Maidán / France Press"
+                  class="openImgModal"
+                >
+                  <img
+                    src="assets/images/la-matcha-p1.png"
+                    data-src="assets/images/la-matcha-p1.png"
+                    class="lazyload"
+                    alt="la matcha img"
+                /></a>
+              </div>
+              <div class="grid-col">
+                <a
+                  data-img="assets/images/la-matcha-p2.png"
+                  data-caption="© Adolfo Maidán / France Press"
+                  class="openImgModal"
+                >
+                  <img
+                    src="assets/images/la-matcha-p2.png"
+                    data-src="assets/images/la-matcha-p2.png"
+                    class="lazyload"
+                    alt="la matcha img"
+                /></a>
+              </div>
+              <div class="grid-col">
+                <a
+                  data-img="assets/images/la-matcha-p3.png"
+                  data-caption="© Adolfo Maidán / France Press"
+                  class="openImgModal"
+                >
+                  <img
+                    src="assets/images/la-matcha-p3.png"
+                    data-src="assets/images/la-matcha-p3.png"
+                    class="lazyload"
+                    alt="la matcha img"
+                /></a>
+              </div>
+              <div class="grid-col">
+                <a
+                  data-img="assets/images/la-matcha-p4.png"
+                  data-caption="© Adolfo Maidán / France Press"
+                  class="openImgModal"
+                >
+                  <img
+                    src="assets/images/la-matcha-p4.png"
+                    data-src="assets/images/la-matcha-p4.png"
+                    class="lazyload"
+                    alt="la matcha img"
+                /></a>
+              </div>
+              <div class="grid-col">
+                <a
+                  data-img="assets/images/la-matcha-p1.png"
+                  data-caption="© Adolfo Maidán / France Press"
+                  class="openImgModal"
+                >
+                  <img
+                    src="assets/images/la-matcha-p1.png"
+                    data-src="assets/images/la-matcha-p1.png"
+                    class="lazyload"
+                    alt="la matcha img"
+                /></a>
+              </div>
+              <div class="grid-col">
+                <a
+                  data-img="assets/images/la-matcha-p5.png"
+                  data-caption="© Adolfo Maidán / France Press"
+                  class="openImgModal"
+                >
+                  <img
+                    src="assets/images/la-matcha-p5.png"
+                    data-src="assets/images/la-matcha-p5.png"
+                    class="lazyload"
+                    alt="la matcha img"
+                  />
+                </a>
+              </div>
             </div>
           </section>
           <section class="col-menu">
             <a
               href="https://maps.google.com"
               target="_blank"
-              class="project-map"
+              class="project-map d-md-block d-none mx-auto"
             >
               <img
                 src="assets/images/la-matcha-map.png"
@@ -228,7 +286,9 @@
                 </div>
               </li>
               <li class="pro-3">
-                <span class="user-select-none">FECHAS y NÚMERO DE VIAJEROS</span>
+                <span class="user-select-none"
+                  >FECHAS y NÚMERO DE VIAJEROS</span
+                >
                 <div class="details d-none">
                   <div class="details-wrapper Pradell-font">
                     <p>
@@ -277,7 +337,7 @@
               </li>
               <li class="pro-4">
                 <span class="user-select-none">ALOJAMIENTO</span>
-                <div class="details d-none">
+                <div class="details d-none Pradell-font">
                   <p>
                     Hotel, Hospedería, Parador o Casa de Campo de 4 estrellas La
                     categoría se puede adaptar a vuestros intereses y según
@@ -372,25 +432,31 @@
           <section class="col-text">
             <div class="section-overlay">
               <div class="text-overlay">
-                <div class="img-wrap">
+                <div class="fleuron-wrap d-lg-block d-none">
                   <img
                     src="assets/images/black-leaf.png"
                     class="lazyload icon-leaf"
                     alt=""
                   />
                 </div>
-                <h4 class="title text-center mb-4">
+                <h4 class="title text-center mb-4 d-lg-block d-none">
                   VIAJE AL CORAZÓN DE LA MANCHA
                 </h4>
                 <div class="text-wrapper truncated">
                   <div class="Pradell-font">
                     <p>
-                      Esta Ruta cubre el corazón de la Mancha: la zona que
-                      comprende La Reserva de La Biosfera La Mancha Húmeda y
-                      pueblos limítrofes como San Clemente y Tembleque. Pero La
-                      Mancha es inmensa. Abarca en sí cuatro provincias: Ciudad
-                      Real, Cuenca, Albacete y Toledo. A continuación os dejamos
-                      unos apuntes que engloban la región.
+                      La Mancha es El Quĳote, molinos de viento, queso manchego,
+                      azafrán, un sol de justicia y extensiones infinitas de
+                      viñedos. Pero hay mucho más… Al adentrarse, la gran
+                      llanura va dibujando un mosaico de plantaciones que sirven
+                      de santuario a las aves esteparias; y desperdigadas por
+                      toda la región aparecen y desaparecen cientos de lagunas,
+                      que conforman el principal humedal continental de la
+                      península, protegidas como Reserva Mundial de la Biosfera,
+                      donde, según la temporada, se monta el gran show entre las
+                      aves acuáticas y las que están de paso; y entre tanta
+                      bodega gigante, hay viticultores quĳotescos que resisten y
+                      se reafirman como productores de vinos de calidad …
                     </p>
                   </div>
                   <div class="Libre-font">
@@ -469,34 +535,23 @@
             </div>
           </section>
           <div class="call-to-actions-items text-center">
-            <div 
-              class="cta-1 d-block"
-              data-aos="fade"
-              data-aos-delay="800"
-            >
+            <div class="cta-1 d-block" data-aos="fade" data-aos-delay="800">
               <span>UBEDA en DICIEMBRE</span>
               <span>Últimas plazas disponibles</span>
-          </div>
-            <div 
-              class="cta-2 d-none"
-              data-aos="fade"
-              data-aos-delay="800"
-            >
+            </div>
+            <div class="cta-2 d-none" data-aos="fade" data-aos-delay="800">
               <span>Sur de Gredos</span>
               <span>Nuevas fechas</span>
             </div>
-            <div 
-              class="cta-logo d-block"
-              data-aos="fade"
-              data-aos-delay="800"
-            >
-              <img src="assets/images/brand-logo.png" data-src="assets/images/brand-logo.png" class="lazyload" alt="">
+            <div class="cta-logo d-block" data-aos="fade" data-aos-delay="800">
+              <img
+                src="assets/images/brand-logo.png"
+                data-src="assets/images/brand-logo.png"
+                class="lazyload"
+                alt=""
+              />
             </div>
-            <div 
-              class="cta-3 d-none"
-              data-aos="fade"
-              data-aos-delay="800"
-            >
+            <div class="cta-3 d-none" data-aos="fade" data-aos-delay="800">
               <span>Este es otro</span>
               <span>CALL to ACTION</span>
             </div>
