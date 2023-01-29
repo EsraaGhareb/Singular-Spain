@@ -2,15 +2,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled">
     <title>Singular Spain</title>
     <link rel="stylesheet" media="all" href="assets/css/aos.css" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?version=27" />
   </head>
 
   <body>
     <div class="main-wrapper">
       <header id="main-header" data-aos="fade" data-aos-delay="300">
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-xl navbar-dark">
           <ul class="social-menu d-flex list-unstyled my-0">
             <li>
               <a href="#">
@@ -97,19 +98,19 @@
               <li class="nav-item" id="Cuaderno">
                 <a class="nav-link last-child" href="#">Cuaderno de Campo</a>
               </li>
-              <li class="nav-item d-lg-none"> 
+              <li class="nav-item d-xl-none"> 
                   <a class="lang-trigger"> ENG</a> , 
                   <a class="lang-trigger"> FRA</a> 
               </li>
             </ul>
           </div>
           <div class="search-blk">
-            <button class="search-mobile d-lg-none" type="button"></button>
-            <input type="text" placeholder="Buscar" class="d-lg-block d-none" />
-            <button class="search-icon d-lg-block d-none" type="button"></button>
+            <button class="search-mobile d-xl-none" type="button"></button>
+            <input type="text" placeholder="Buscar" class="d-xl-block d-none" />
+            <button class="search-icon d-xl-block d-none" type="button"></button>
           </div>
          
-          <div class="lang-blk d-lg-block d-none">
+          <div class="lang-blk d-xl-block d-none">
             <a class="lang-trigger current-lang"> ESP</a>
             <a class="lang-trigger"> ENG</a>
             <a class="lang-trigger"> FRA</a>
@@ -130,7 +131,7 @@
             <div class="text-overlay" data-aos="fade" data-aos-delay="1200">
               Un viaje hacia la singularidad.
             </div>
-            <div class="arrow-fixed" data-aos="fade" data-aos-delay="2000">
+            <div class="arrow-fixed d-none">
               <a href="#main-hola">
                 <img
                   src="assets/images/arrow-white.png"
@@ -161,15 +162,13 @@
               </a>
               <a
                 href="#"
-                class="cta-3 d-block"
-                data-aos="fade"
-                data-aos-delay="3000"
+                class="cta-3 d-none" 
               >
                 <span>Este es otro</span>
                 <span>CALL to ACTION</span>
               </a>
             </div>
-            <div class="site-logo" data-aos="fade">
+            <div class="site-logo">
               <img
                 src="assets/images/logo.png"
                 data-src="assets/images/logo.png"
@@ -179,10 +178,10 @@
             </div>
           </div>
         </section>
-        <section id="main-hola" >
+        <section class="main-hola" >
           <img
-            src="assets/images/hola-img.png"
-            data-src="assets/images/hola-img.png"
+            src="assets/images/hola-image.png"
+            data-src="assets/images/hola-image.png"
             class="lazyload"
             alt="Hola image"
           />
@@ -224,6 +223,6 @@
     <script src="assets/js/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/scripts.js?version=3"></script>
   </body>
 </html>

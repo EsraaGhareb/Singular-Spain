@@ -25,6 +25,12 @@ function windowSize() {
 initiateAnimation();
 
 $(document).ready(function () {
+  setTimeout(function(){
+    $(".arrow-fixed").removeClass("d-none");
+  }, 2000)
+  setTimeout(function(){
+    $("#main-home .call-to-actions-items .cta-3").removeClass("d-none").addClass("d-block");
+  }, 3000)
   $(".search-blk input").on("input", function () {
     $(this).parents(".search-blk").find(".search-icon").addClass("active");
     if ($(this).val() == "") {
@@ -40,7 +46,7 @@ $(document).ready(function () {
   });
 
   if (window.location.hash == "#main-hola") {
-    $("#main-hola").addClass("extrnal-animate");
+    $(".main-hola").addClass("extrnal-animate");
     $("#hola").addClass("active");
     $("#main-home").addClass("opacity-0").removeClass("layered-home");
   }
@@ -49,21 +55,19 @@ $(document).ready(function () {
     // if user clicked hola from home
     if ($("#main-home").length) {
       // setTimeout(function () {
-      $("#main-hola").addClass("animated");
+      $(".main-hola").addClass("animated");
       // }, 400);
       $("#main-home").removeClass("layered-home");
     } else {
       $("#main-home").addClass("opacity-0");
-      $("#main-hola").addClass("extrnal-animate");
+      $(".main-hola").addClass("extrnal-animate");
     }
   });
   // if user clicked hola's arrow from home
   $("#main-home .arrow-fixed a").on("click", function () {
     let section_id = $(this).attr("href");
-    $("#hola").addClass("active");
-    // setTimeout(function () {
-    $(section_id).addClass("animated");
-    // }, 400);
+    $("#hola").addClass("active");   
+    $(".main-hola").addClass("animated");
     $("#main-home").removeClass("layered-home");
   });
 
