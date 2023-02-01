@@ -10631,31 +10631,37 @@ img {
 }
 #main-header .navbar .social-menu {
   margin-right: 1.3rem;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
+}
+#main-header .navbar .social-menu li:not(:last-child) {
+  margin-right: 1rem;
 }
 @media (max-width: 1100px) {
   #main-header .navbar .social-menu {
     margin-right: 0.5rem;
-    -moz-column-gap: 1rem;
-         column-gap: 1rem;
+  }
+  #main-header .navbar .social-menu li:not(:last-child) {
+    margin-right: 1rem;
   }
 }
 @media (min-width: 1860px) {
   #main-header .navbar .social-menu {
     margin-right: 1.6875rem;
-    -moz-column-gap: 1.1875rem;
-         column-gap: 1.1875rem;
   }
+  #main-header .navbar .social-menu li:not(:last-child) {
+    margin-right: 1.1875rem;
+  }
+}
+#main-header .navbar .social-menu img {
+  max-width: 24px;
 }
 @media (max-width: 1100px) {
   #main-header .navbar .social-menu img {
-    min-width: 22px;
+    max-width: 22px;
   }
 }
 @media (min-width: 1860px) {
   #main-header .navbar .social-menu img {
-    min-width: 30px;
+    width: 26px;
   }
 }
 #main-header .navbar .navbar-brand {
@@ -10676,7 +10682,7 @@ img {
   margin-left: 4%;
   justify-content: space-between;
   align-items: center;
-  min-width: calc(100% - 90px);
+  min-width: 95%;
   -moz-column-gap: 25px;
        column-gap: 25px;
 }
@@ -10768,7 +10774,7 @@ img {
 #main-header .navbar .navbar-nav li a.last-child {
   text-transform: initial;
   font-family: "Brandon Regular";
-  letter-spacing: 0.5;
+  letter-spacing: 0.5 !important;
 }
 @media (min-width: 1200px) {
   #main-header .navbar .navbar-nav li:hover > a::after, #main-header .navbar .navbar-nav li.active > a::after {
@@ -11105,19 +11111,20 @@ img {
 }
 #main-content #main-home .call-to-actions-items span:first-child,
 #main-content .main-projects .call-to-actions-items span:first-child {
-  font: 15px "Brandon Bold";
+  font: 15px "Brandon Medium";
   position: relative;
 }
 @media (min-width: 1860px) {
   #main-content #main-home .call-to-actions-items span:first-child,
 #main-content .main-projects .call-to-actions-items span:first-child {
-    font: 26px "Brandon Bold";
+    font: 26px "Brandon Medium";
   }
 }
 #main-content #main-home .call-to-actions-items span:first-child::after,
 #main-content .main-projects .call-to-actions-items span:first-child::after {
   content: "";
   width: 68%;
+  max-width: 130px;
   height: 2px;
   display: block;
   margin: 5px auto;
@@ -11125,12 +11132,12 @@ img {
 }
 #main-content #main-home .call-to-actions-items span:last-child,
 #main-content .main-projects .call-to-actions-items span:last-child {
-  font: 12px "Pradell SemiBold";
+  font: 12px "Pradell";
 }
 @media (min-width: 1860px) {
   #main-content #main-home .call-to-actions-items span:last-child,
 #main-content .main-projects .call-to-actions-items span:last-child {
-    font: 22px "Pradell SemiBold";
+    font: 22px "Pradell";
   }
 }
 #main-content #main-home .call-to-actions-items .cta-1,
@@ -11152,6 +11159,11 @@ img {
 #main-content .main-projects .call-to-actions-items .cta-1,
 #main-content .main-projects .call-to-actions-items .cta-1 a {
   color: #fff;
+}
+#main-content #main-home .call-to-actions-items .cta-1 span:first-child::after,
+#main-content .main-projects .call-to-actions-items .cta-1 span:first-child::after {
+  height: 3px;
+  width: 50%;
 }
 #main-content #main-home .call-to-actions-items .cta-2,
 #main-content .main-projects .call-to-actions-items .cta-2 {
@@ -11226,12 +11238,12 @@ img {
 }
 #main-content #main-home .call-to-actions-items .cta-3 span,
 #main-content .main-projects .call-to-actions-items .cta-3 span {
-  font: 16px "Brandon Bold";
+  font: 16px "Brandon Medium";
 }
 @media (min-width: 1860px) {
   #main-content #main-home .call-to-actions-items .cta-3 span,
 #main-content .main-projects .call-to-actions-items .cta-3 span {
-    font: 26px "Brandon Bold";
+    font: 26px "Brandon Medium";
   }
 }
 #main-content #main-home .call-to-actions-items .cta-3 span::after,
@@ -11323,7 +11335,7 @@ img {
 }
 @media (max-width: 1199.9px) {
   #main-content .Brandon-font-bold {
-    font: 20px "Brandon Bold";
+    font: 15px "Brandon Bold";
   }
 }
 @media (min-width: 1860px) {
@@ -11675,7 +11687,7 @@ img {
   background-color: #fff;
 }
 #main-content .main-projects .col-menu .project-menu > li .details {
-  padding: 10px 5px 0;
+  padding: 10px 5px;
   position: absolute;
   top: 100%;
   width: 100%;
@@ -11683,19 +11695,19 @@ img {
   line-height: 26px;
   background-color: #fff;
   z-index: 3;
-  height: 144px;
+  height: auto;
   min-height: -webkit-fit-content;
   min-height: -moz-fit-content;
   min-height: fit-content;
 }
 @media (max-width: 1200px) {
   #main-content .main-projects .col-menu .project-menu > li .details {
-    padding: 12px 5px 0;
+    padding: 12px 5px;
   }
 }
 @media (min-width: 1860px) {
   #main-content .main-projects .col-menu .project-menu > li .details {
-    padding: 12px 8px 0;
+    padding: 12px 8px;
   }
 }
 #main-content .main-projects .col-menu .project-menu > li .details .Pradell-font {
@@ -11703,7 +11715,7 @@ img {
 }
 @media (max-width: 1199.9px) {
   #main-content .main-projects .col-menu .project-menu > li .details .Pradell-font {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
 @media (min-width: 1860px) {
@@ -11856,29 +11868,29 @@ img {
   }
 }
 #main-content .main-projects .call-to-actions-items span:first-child {
-  font: 14px "Brandon Bold";
+  font: 14px "Brandon Medium";
 }
 @media (min-width: 1440px) {
   #main-content .main-projects .call-to-actions-items span:first-child {
-    font: 16px "Brandon Bold";
+    font: 16px "Brandon Medium";
   }
 }
 @media (min-width: 1600px) {
   #main-content .main-projects .call-to-actions-items span:first-child {
-    font: 17px "Brandon Bold";
+    font: 17px "Brandon Medium";
   }
 }
 #main-content .main-projects .call-to-actions-items span:last-child {
-  font: 13px "Pradell SemiBold";
+  font: 13px "Pradell";
 }
 @media (min-width: 1440px) {
   #main-content .main-projects .call-to-actions-items span:last-child {
-    font: 12px "Pradell SemiBold";
+    font: 12px "Pradell";
   }
 }
 @media (min-width: 1600px) {
   #main-content .main-projects .call-to-actions-items span:last-child {
-    font: 14px "Pradell SemiBold";
+    font: 14px "Pradell";
   }
 }
 #main-content .main-projects .call-to-actions-items .cta-2 {
@@ -12079,7 +12091,7 @@ img {
     top: 0 !important;
     width: 190px !important;
   }
-  .navbar .navbar-collapse .navbar-nav .nav-item .sub-menu .nav-item:last-child a::after {
+  .navbar .navbar-collapse .navbar-nav .nav-item .sub-menu > .nav-item:last-child a::after {
     content: none !important;
   }
   .navbar .navbar-collapse .navbar-nav .nav-item .sub-menu a {
@@ -12108,7 +12120,7 @@ img {
     bottom: 60px;
   }
   #main-content .arrow-fixed img {
-    width: 100px !important;
+    width: 85px !important;
   }
   #main-content #main-home .section-overlay,
 #main-content .main-hola .section-overlay {
@@ -12120,182 +12132,193 @@ img {
   }
   #main-content #main-home .arrow-fixed img,
 #main-content .main-hola .arrow-fixed img {
-    width: 135px !important;
+    width: 110px !important;
   }
-  .main-hola .section-overlay {
+  #main-content .main-hola .section-overlay {
     width: 100% !important;
     max-width: 100% !important;
     justify-content: center !important;
   }
-  .main-hola .section-overlay .text-overlay {
-    font: 23px/32px "Libre Baskerville Italic" !important;
+  #main-content .main-hola .section-overlay .text-overlay {
+    font: 22px/32px "Libre Baskerville Italic" !important;
+    margin: 35px auto !important;
+    max-width: 450px !important;
   }
-  #main-rutas {
+  #main-content .main-hola .section-overlay .text-overlay p {
+    background-color: #fff;
+    padding: 22px;
+  }
+  #main-content .main-hola .section-overlay .fleuron-wrap img {
+    filter: invert(1);
+  }
+  #main-content .main-hola .section-overlay .fleuron-wrap::after {
+    background-color: #fff !important;
+  }
+  #main-content #main-rutas {
     flex-direction: column;
     padding: 30px 40px 70px !important;
     max-width: 615px;
     margin: auto;
   }
-  #main-rutas .col-menu {
+  #main-content #main-rutas .col-menu {
     order: 1;
     flex: initial !important;
     max-height: initial !important;
   }
-  #main-rutas .col-menu .title {
+  #main-content #main-rutas .col-menu .title {
     padding-bottom: 10px !important;
     font: 31px/26px "Brandon Medium" !important;
   }
-  #main-rutas .col-menu .fleuron-wrap {
+  #main-content #main-rutas .col-menu .fleuron-wrap {
     padding-bottom: 0 !important;
   }
-  #main-rutas .col-menu .fleuron-wrap img {
+  #main-content #main-rutas .col-menu .fleuron-wrap img {
     height: 40px;
   }
-  #main-rutas .col-menu .fleuron-wrap::after {
+  #main-content #main-rutas .col-menu .fleuron-wrap::after {
     content: none !important;
   }
-  #main-rutas .col-menu .rutas-menu {
+  #main-content #main-rutas .col-menu .rutas-menu {
     margin-bottom: 0;
   }
-  #main-rutas .col-menu .rutas-menu::after {
-    content: none !important;
-  }
-  #main-rutas .col-menu .rutas-menu li a {
+  #main-content #main-rutas .col-menu .rutas-menu li a {
     font: 23px/33px "Brandon Medium" !important;
   }
-  #main-rutas .col-img {
+  #main-content #main-rutas .col-img {
     order: 2;
     flex: initial !important;
     max-height: initial !important;
   }
-  #main-rutas .col-img img {
-    margin-top: -30px;
-    margin-bottom: -20px;
+  #main-content #main-rutas .col-img img {
+    margin-top: -4px;
+    margin-bottom: -5px;
   }
-  #main-rutas .col-text {
+  #main-content #main-rutas .col-text {
     order: 3;
     flex: initial !important;
     max-height: initial !important;
     font: 20px/26px "Pradell" !important;
   }
-  #main-rutas .col-text .text-wrapper.truncated {
+  #main-content #main-rutas .col-text .text-wrapper.truncated {
     -webkit-line-clamp: 14 !important;
   }
-  .col-text .text-controls {
+  #main-content .col-text .text-controls {
     font: 22px/32px "Brandon Medium" !important;
   }
-  .col-text .text-controls::before {
+  #main-content .col-text .text-controls::before {
     width: 130px !important;
   }
-  .main-projects {
+  #main-content .main-projects {
     padding: 41px 30px !important;
     flex-wrap: wrap;
   }
-  .main-projects .col-imgs-grid .text-overlay .title,
-.main-projects .col-mobile .title {
+  #main-content .main-projects .col-imgs-grid .text-overlay .title,
+#main-content .main-projects .col-mobile .title {
     font: 23px/43px "Brandon Bold";
     padding: 0px;
     max-width: 290px;
     margin: auto;
     letter-spacing: 0.75px;
   }
-  .main-projects .col-imgs-grid .text-overlay .project-map,
-.main-projects .col-mobile .project-map {
+  #main-content .main-projects .col-imgs-grid .text-overlay .project-map,
+#main-content .main-projects .col-mobile .project-map {
     width: 125px;
     display: block;
     margin-bottom: 25px;
   }
-  .main-projects .col-imgs-grid .text-overlay .project-map img,
-.main-projects .col-mobile .project-map img {
+  #main-content .main-projects .col-imgs-grid .text-overlay .project-map img,
+#main-content .main-projects .col-mobile .project-map img {
     width: 100%;
   }
-  .main-projects .call-to-actions-items span:last-child {
-    font: 11px "Pradell SemiBold" !important;
+  #main-content .main-projects .call-to-actions-items span:last-child {
+    font: 11px "Pradell" !important;
   }
-  .main-projects .call-to-actions-items .cta-1 {
+  #main-content .main-projects .call-to-actions-items .cta-1 {
     min-width: 180px !important;
     right: 20px !important;
   }
-  .main-projects .call-to-actions-items .cta-2, .main-projects .call-to-actions-items .cta-3 {
+  #main-content .main-projects .call-to-actions-items .cta-2,
+#main-content .main-projects .call-to-actions-items .cta-3 {
     right: 20px !important;
   }
-  .main-projects .call-to-actions-items .cta-logo {
+  #main-content .main-projects .call-to-actions-items .cta-logo {
     right: 10px;
     width: 65px !important;
     top: 20px !important;
   }
-  .main-projects .col-menu {
+  #main-content .main-projects .col-menu {
     padding-bottom: 15px;
     order: 1;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
   }
-  .main-projects .col-menu .project-map img {
+  #main-content .main-projects .col-menu .project-map img {
     width: 80% !important;
     margin-bottom: 22%;
   }
-  .main-projects .col-menu .project-menu {
+  #main-content .main-projects .col-menu .project-menu {
     min-width: 275px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
   }
-  .main-projects .col-menu .project-menu > li {
+  #main-content .main-projects .col-menu .project-menu > li {
     font: 14.5px "Brandon Medium" !important;
   }
-  .main-projects .col-menu .project-menu > li .details {
+  #main-content .main-projects .col-menu .project-menu > li .details {
     left: -41% !important;
     width: 181% !important;
-    padding: 10px 20px 5px !important;
+    padding: 10px 12px !important;
+    letter-spacing: initial;
   }
-  .main-projects .col-menu .project-menu > li:nth-child(2) .details, .main-projects .col-menu .project-menu > li:nth-child(4) .details {
+  #main-content .main-projects .col-menu .project-menu > li:nth-child(2) .details, #main-content .main-projects .col-menu .project-menu > li:nth-child(4) .details {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
   }
-  .main-projects .col-menu .project-menu > li:nth-child(3) .details, .main-projects .col-menu .project-menu > li:nth-child(5) .details {
+  #main-content .main-projects .col-menu .project-menu > li:nth-child(3) .details, #main-content .main-projects .col-menu .project-menu > li:nth-child(5) .details {
     height: auto !important;
     padding: 0 !important;
   }
-  .main-projects .col-menu .project-menu > li:nth-child(3) .details .details-wrapper, .main-projects .col-menu .project-menu > li:nth-child(5) .details .details-wrapper {
-    padding: 10px 20px 5px !important;
+  #main-content .main-projects .col-menu .project-menu > li:nth-child(3) .details .details-wrapper, #main-content .main-projects .col-menu .project-menu > li:nth-child(5) .details .details-wrapper {
+    padding: 10px 12px 20px !important;
   }
-  .main-projects .col-imgs-grid {
+  #main-content .main-projects .col-imgs-grid {
     order: 2;
     max-width: calc(100% - 270px);
   }
-  .main-projects .col-text {
+  #main-content .main-projects .col-text {
     order: 3;
     font: 20px/24px "Pradell" !important;
     flex: 0 0 100% !important;
     max-width: 520px;
     margin: 0 auto;
   }
-  .main-projects .col-text .text-controls {
+  #main-content .main-projects .col-text .text-controls {
     margin-top: 45px !important;
   }
-  .main-projects .col-text .text-controls::before {
+  #main-content .main-projects .col-text .text-controls::before {
     margin: 0 auto 40px !important;
   }
-  .main-projects .col-imgs-grid .imgs-grid-wrapper {
+  #main-content .main-projects .col-imgs-grid .imgs-grid-wrapper {
     flex-wrap: nowrap !important;
     overflow-x: auto;
     gap: 40px !important;
     margin-right: -41px;
   }
-  .main-projects .col-imgs-grid .imgs-grid-wrapper::-webkit-scrollbar {
+  #main-content .main-projects .col-imgs-grid .imgs-grid-wrapper::-webkit-scrollbar {
     width: 7px;
     height: 1px;
   }
-  .main-projects .col-imgs-grid .grid-col {
+  #main-content .main-projects .col-imgs-grid .grid-col {
     flex: 0 0 calc(75% - 5px) !important;
     height: 210px !important;
   }
-  .main-projects .col-imgs-grid .grid-col:last-child {
+  #main-content .main-projects .col-imgs-grid .grid-col:last-child {
     margin-right: 25px;
   }
-  #GalleryModal img {
+  #main-content #GalleryModal img {
     border-width: 5px !important;
   }
 }
@@ -12332,7 +12355,9 @@ img {
   .main-projects .col-imgs-grid .title {
     font: 25px/38px "Brandon Bold" !important;
   }
-  .main-projects .cta-1, .main-projects .cta-2, .main-projects .cta-3 {
+  .main-projects .cta-1,
+.main-projects .cta-2,
+.main-projects .cta-3 {
     right: 20px !important;
     top: 120px !important;
   }
@@ -12344,7 +12369,7 @@ img {
   }
   .main-projects .col-menu .project-menu > li {
     font: 14px "Brandon Medium" !important;
-    padding: 0 5px !important;
+    padding: 0 10px !important;
   }
   .main-projects .col-menu .project-menu > li .details {
     width: 100% !important;
@@ -12384,11 +12409,18 @@ img {
     min-width: fit-content;
     margin: 0 !important;
     justify-content: end;
-    -moz-column-gap: 0.9rem !important;
-         column-gap: 0.9rem !important;
+  }
+  #main-header .navbar .social-menu li:not(:last-child) {
+    margin-right: 0.9rem !important;
   }
   #main-header .navbar .social-menu img {
     width: 22px;
+  }
+  #main-content #main-home .section-overlay .site-logo {
+    position: fixed;
+  }
+  #main-content #main-home .call-to-actions-items .cta-3 {
+    top: calc(100% - 35vh) !important;
   }
   .main-hola > img {
     -o-object-position: right;
@@ -12447,6 +12479,9 @@ img {
     margin: auto !important;
     width: 95% !important;
   }
+  #main-rutas .col-menu .rutas-menu::after {
+    content: none !important;
+  }
 }
 @media (max-width: 580px) {
   #main-header .navbar .navbar-brand {
@@ -12483,11 +12518,11 @@ img {
   }
   #main-content #main-home .call-to-actions-items span:first-child,
 #main-content .main-projects .call-to-actions-items span:first-child {
-    font: 11px "Brandon Bold";
+    font: 11px "Brandon Medium";
   }
   #main-content #main-home .call-to-actions-items span:last-child,
 #main-content .main-projects .call-to-actions-items span:last-child {
-    font: 9px "Pradell SemiBold" !important;
+    font: 9px "Pradell" !important;
   }
   #main-content #main-home .call-to-actions-items span::after,
 #main-content .main-projects .call-to-actions-items span::after {
@@ -12539,22 +12574,33 @@ img {
   }
   #main-content #main-home .call-to-actions-items .cta-3 span,
 #main-content .main-projects .call-to-actions-items .cta-3 span {
-    font: 13px/1 "Brandon Bold";
+    font: 13px/1 "Brandon Medium";
   }
   #main-content #main-home .call-to-actions-items .cta-3 {
     right: 30px !important;
   }
   #main-content #main-home .section-overlay .text-overlay {
-    font: 39px "Pradell Bold";
+    font: 37px "Pradell Bold";
   }
   #main-content #main-home .site-logo img {
     width: 100px;
     height: 100px;
   }
-  #main-content .main-hola {
+  #main-content .main-hola::before {
+    content: "";
+    width: 100%;
+    height: 100%;
     background: url(../images/hola-image.png) no-repeat;
     background-size: auto 110%;
     background-position: top right 2%;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    transition: left 1s ease-out;
+    transition-property: left;
+  }
+  #main-content .main-hola.extrnal-animate::before, #main-content .main-hola.animated::before {
+    left: 0;
   }
   #main-content .main-hola > img {
     display: none;
@@ -12610,7 +12656,9 @@ img {
   #main-header .navbar .navbar-brand {
     font: 1.3rem/1.24 "Brandon Bold" !important;
   }
-  #main-content .main-projects .call-to-actions-items .cta-1, #main-content .main-projects .call-to-actions-items .cta-2, #main-content .main-projects .call-to-actions-items .cta-3 {
+  #main-content .main-projects .call-to-actions-items .cta-1,
+#main-content .main-projects .call-to-actions-items .cta-2,
+#main-content .main-projects .call-to-actions-items .cta-3 {
     width: auto !important;
     min-width: auto !important;
     right: 15px !important;
@@ -12620,9 +12668,8 @@ img {
   #main-header {
     padding: 0 10px !important;
   }
-  #main-header .navbar .social-menu {
-    -moz-column-gap: 0.5rem !important;
-         column-gap: 0.5rem !important;
+  #main-header .navbar .social-menu li:not(:last-child) {
+    margin-right: 0.5rem !important;
   }
   #main-header .navbar .social-menu img {
     width: 22px !important;
@@ -12665,10 +12712,10 @@ img {
     max-width: 215px;
   }
   #main-content .main-projects .call-to-actions-items span:first-child {
-    font: 10px "Brandon Bold";
+    font: 10px "Brandon Medium";
   }
   #main-content .main-projects .call-to-actions-items span:last-child {
-    font: 8px "Pradell SemiBold" !important;
+    font: 8px "Pradell" !important;
   }
   #main-content .main-projects .call-to-actions-items .cta-1 {
     padding: 3px 5px;
@@ -12677,7 +12724,9 @@ img {
     width: 40px !important;
     left: 5px !important;
   }
-  #main-content .main-projects .call-to-actions-items .cta-1, #main-content .main-projects .call-to-actions-items .cta-2, #main-content .main-projects .call-to-actions-items .cta-3 {
+  #main-content .main-projects .call-to-actions-items .cta-1,
+#main-content .main-projects .call-to-actions-items .cta-2,
+#main-content .main-projects .call-to-actions-items .cta-3 {
     top: 15px !important;
     right: 5px !important;
   }
