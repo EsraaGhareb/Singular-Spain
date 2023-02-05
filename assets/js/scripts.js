@@ -26,16 +26,16 @@ initiateAnimation();
 
 $(document).ready(function () {
   setTimeout(function(){
-    $(".arrow-fixed").removeClass("d-none");
+    $(".arrow-fixed").removeClass("opacity-0").addClass("fade-animate");
+  }, 1000);
+  setTimeout(function(){
+    $("#main-home .call-to-actions-items .cta-1").removeClass("opacity-0").addClass("fade-animate");
+    $("#main-home .call-to-actions-items .cta-2").removeClass("opacity-0").addClass("fade-animate");
+    $("#main-home .call-to-actions-items .cta-3").removeClass("opacity-0").addClass("fade-animate");
   }, 2500);
   setTimeout(function(){
-    $("#main-home .call-to-actions-items .cta-1").removeClass("d-none").addClass("d-block");
-    $("#main-home .call-to-actions-items .cta-2").removeClass("d-none").addClass("d-block");
-    $("#main-home .call-to-actions-items .cta-3").removeClass("d-none").addClass("d-block");
-  }, 3500);
-  setTimeout(function(){
-    $("#main-home .text-overlay").removeClass("opacity-0");
-  }, 1800);
+    $("#main-home .text-overlay").removeClass("opacity-0").addClass("fade-animate");
+  }, 800);
   
   $(".search-blk input").on("input", function () {
     $(this).parents(".search-blk").find(".search-icon").addClass("active");
