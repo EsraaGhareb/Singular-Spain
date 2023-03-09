@@ -12633,8 +12633,9 @@ img {
     background-color: #fff !important;
   }
   .main-projects {
-    display: block !important;
+    flex-direction: column;
     padding: 40px 22px !important;
+    flex-wrap: initial !important;
   }
   .main-projects .col-menu {
     order: 3 !important;

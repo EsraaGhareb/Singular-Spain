@@ -2515,8 +2515,9 @@ img {
     }
 
     .main-projects {
-        display: block !important; 
-        padding: 40px 22px !important; 
+        flex-direction: column;
+        padding: 40px 22px !important;
+        flex-wrap: initial !important;
 
         .col-menu {
             order: 3 !important;
