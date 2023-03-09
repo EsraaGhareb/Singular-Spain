@@ -12400,8 +12400,8 @@ img {
   }
   #main-content .main-projects .col-mobile {
     flex: initial;
-    height: -moz-max-content;
-    height: max-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
   #main-content .main-projects .col-mobile .fleuron-wrap img {
     height: 37px;
