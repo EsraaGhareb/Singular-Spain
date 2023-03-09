@@ -1,0 +1,870 @@
+<html lang="en">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+    <title>Singular Spain</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/styles.css?version=41" />  
+    <link rel="stylesheet" href="assets/css/basic-temp.css" /> 
+   
+    <style>
+      
+      #main-content .main-basic .col-text .text-overlay .fleuron-wrap::after {
+          height: 2px; 
+          margin: 18px auto; 
+      }
+
+      #main-content .main-basic .grid-shell{
+        width: auto;
+        flex: 0 0 560px; 
+        height: auto; 
+        margin: 0 50px 0 0;  
+      }
+
+      .dis-md,
+      .dis-tablet,
+      .dis-mob{
+        display: none;
+      } 
+      
+      .carousel-item-next, .carousel-item-prev, .carousel-item.active {
+          display: flex;
+          flex-direction: column;
+      } 
+      #main-content .main-basic .grid-shell .cover{
+        max-height: 480px;
+        margin-top: 162px;    
+      }
+      .col-text .main-title{
+        font: 28px/26px "Brandon Italic";
+      }
+      #main-content .main-basic .col-text .title {
+          font: 21px/26px "Brandon Bold"; 
+          padding: 0;
+          letter-spacing: 0px;
+          margin: 0;  
+      }
+      #main-content .main-basic .col-text .text-wrapper.truncated {
+          max-height: 500px; 
+      }
+      #main-content .main-basic .col-text .text-wrapper{
+          margin-top: 26px;  
+      }
+ 
+      .logo-title{ 
+        font: 18px "Brandon Regular";       
+        letter-spacing: -0.5px;   
+        padding-right: 35px; 
+        text-align: center;   
+      }    
+      .headtitle{ 
+        margin-bottom: 30px;        
+      } 
+      .g2 .headtitle{   
+        margin-bottom: 50px;    
+      }  
+      .logo-groups-container{
+        display: flex; 
+         
+      }
+      .logo-group{ 
+        display: flex;
+        flex-direction: column;  
+        align-items: center;    
+        margin: 190px auto;  
+        margin-top: 190px;    
+        flex: 0 0 230px;   
+      }      
+    .logo-group .g1{
+        margin:0  15px;  
+        padding: 12.5px 12.5px 0px;   
+      }
+      
+      .g2 .logo-title, 
+      .logo-section .logo-title{   
+        padding:0;
+      }
+      .g2 .logo-item{
+        max-height: 100px;
+        margin-bottom: 45px; 
+        padding: 0 65px;  
+        object-fit: contain;
+      }
+      .logo-item{ 
+        width: 100%;
+        height: auto;  
+        object-fit: contain;
+        margin-bottom: 60px;
+      }
+
+      
+      .comment-group{ 
+        display: flex;
+        width: 230px;   
+        height: 120px;       
+      }  
+      .comment-item{
+        height: 100%;  
+      } 
+       
+      .nextArrow { 
+        height: 40px; 
+        margin-top: 23px;        
+        width: 40px;  
+      }
+      .nextArrow img{  
+        margin-top: 12px;  
+      } 
+      /* .comment-item{ 
+        margin-left: 10px;  
+      } */
+      .comment-section
+      {
+        margin-right: 15px; 
+      }
+      .comment-desc{ 
+        font: 14px/16px "Brandon Italic" ; 
+        margin-bottom: 5px;  
+        flex: 1;
+      }
+      .comment-auth{ 
+        font: 14px/16px "Brandon Regular" ;
+        margin-bottom: 0;  
+      }
+
+      .static-area{
+        margin-top: 20px;  
+        font: 19px/26px "Brandon Regular";   
+      }
+        
+      .static-icons-grid{
+        display: grid;    
+        margin-top: 5px;  
+        grid-gap: 15px;   
+        grid-template-columns: repeat(auto-fill, 65px); 
+      }
+      .static-icons-grid img{ 
+        width: auto;  
+      }
+      @media (min-width: 1600px){
+        #main-content .main-basic .col-text{ 
+          padding-top: 40px; 
+        }  
+        .logo-groups-container{
+          margin-right: 30px;     
+          min-width: 490px !important;   
+        }
+        .g2 {
+          margin-left: 0px;  
+          margin-right: 0px;
+        } 
+      }
+      @media (max-width: 1600px) and (min-width: 1199.9px){   
+        
+        #main-content .main-basic .grid-shell{
+          display: none;
+        }  
+        .logo-groups-container{
+          padding-right: 50px; 
+        }
+        .logo-group:first-child{  
+            margin-right: 8%;   
+        }  
+        .logo-group:last-child{  
+            margin-left: 0;  
+        }  
+        #main-content .main-basic .col-text .mobile-cover {
+            display: block;
+            height: 375px; 
+            margin-bottom: 36px;     
+        } 
+        .logo-section{
+          order: 1;  
+          
+        } 
+        .g2{
+          order: 2; 
+          margin-bottom: 0; 
+        } 
+        .dis-md{
+        display: block; 
+        }
+  
+        .static-area{
+          margin-top: 100px;  
+          font: 16px/24px "Brandon Regular";
+        } 
+        .static-icons-grid{  
+          margin-top:60px;
+          grid-template-columns: repeat(auto-fill, 60px);
+        }
+      }
+      @media (min-width: 1199.9px){  
+         
+        #main-content .main-basic {   
+          padding-right: 14vw;     
+        }
+        .logo-groups-container{
+          min-width: 450px;   
+        }
+        .noso-fleuron { 
+          display: none; 
+        } 
+      }
+      @media (max-width: 1199.9px){
+        
+        #main-content .main-basic .col-text .mobile-cover{
+          margin-bottom: 26px; 
+        }
+        #main-content .main-basic .col-text .text-overlay .fleuron-wrap::after {
+            height: 3px;
+            margin: 18px auto;
+            width: 110px; 
+        }
+        #main-content .main-basic .col-text .mobile-cover{ 
+          height: 355px; 
+        }
+        .noso-fleuron {
+            display: block;
+            margin: 0 auto 25px auto; 
+            position: relative;
+            text-align: center; 
+        } 
+        .noso-fleuron img {
+          height: 37px; 
+          -o-object-fit: contain;
+          object-fit: contain;
+        } 
+        .noso-fleuron::after {
+          content: "";
+          width: 110px; 
+          height: 4px;
+          display: block;
+          margin: 15px auto 0;
+          background-color: #000;
+        }
+        .logo-section{
+          margin-bottom: 100px;   
+        }
+        .logo-groups-container{ 
+          flex-direction: column;  
+          padding-top: 30px;
+          margin: 0 auto; 
+          max-height: 1000px; 
+        } 
+        .logo-title{
+          padding-right: 0; 
+          margin-bottom: 25px;     
+          font-family: "Brandon Bold"; 
+        }
+        .logo-group .g1{
+          padding: 0;   
+          margin: 0 30px;
+        }
+        .logo-group .g1{
+          order: 2; 
+        }
+        .nextArrow{   
+          width: 55px; 
+          margin-top: 35px; 
+        }
+        .comment-group{
+          margin-left: 55px;
+          margin-bottom: 100px;
+          width: 230px;
+        }
+        .comment-desc { 
+          font: 15px/16px "Brandon Italic";
+        }
+        .comment-auth {
+            font: 15px/16px "Brandon Regular"; 
+            margin-bottom: 0;
+        } 
+        .logo-group{ 
+          max-width: 246px;    
+          margin-top: 0;  
+          order: 1;  
+          margin: 0; 
+        }  
+        .logo-item{
+          margin-bottom: 30px;
+        }
+        .logo-item:last-child{
+          margin-bottom: 0;
+        }
+        
+        .g2 .logo-item { 
+          padding: 0 70px;  
+          margin-bottom: 25px;  
+        } 
+        .comment-section .logo-title{   
+          margin-bottom: 1rem;
+        }
+
+        .dis-tablet{
+          display: block; 
+        } 
+        .static-area{
+          margin-top: 0px;   
+          margin-bottom: 100px;  
+          font: 16px/22px "Brandon Regular";
+        }   
+        .static-icons-grid{  
+          margin-top:0px; 
+          grid-template-columns: repeat(auto-fill, 60px);
+        } 
+        
+      }
+      @media (min-width: 767.9px) and (max-width: 1199.9px){
+        .col-text .main-title{
+          font: 30px/26px "Brandon Italic";
+        }
+        #main-content .main-basic .col-text .section-overlay .text-overlay .title { 
+            font: 22px/26px "Brandon Bold"; 
+        }     
+        #main-content .main-basic { 
+          padding: 45px 15px 100px; 
+        }  
+/*         
+        .logo-groups-container{
+          padding-right: 20px;
+        } */
+
+        
+       
+      }
+      @media (min-width: 767.8px){  
+
+        .inner-g{
+          display: block; 
+        }
+        .outer-g{ 
+          display: none;
+        }  
+      }
+      @media (max-width: 767.8px){ 
+        #main-content .main-basic { 
+            padding-top: 35px;
+        }   
+        .noso-fleuron{
+          margin: 0 auto 30px auto
+        } 
+        .logo-group{
+          max-width: 100%;    
+          order: 1; 
+          margin-bottom: 0;  
+        }
+        .comment-group {
+            margin-left: 55px;
+            margin-bottom: 60px;       
+        } 
+        .noso-fleuron::after{
+          width: 130px;
+          height: 2px;   
+        }
+        .logo-groups-container{
+          padding-top: 0;
+        }
+        #main-content .main-basic .col-text{
+          padding: 18px;  
+          padding-bottom: 0; 
+        } 
+        .logo-section{
+          margin-bottom: 0px;   
+        }
+        #main-content .main-basic .col-text .text-overlay .fleuron-wrap::after {
+            height: 3px;
+            margin: 10px auto;
+            max-width: 100%;
+            width: 160px;
+            display: -webkit-inline-box;
+        } 
+        #main-content .main-basic .col-text .text-overlay .fleuron-wrap {
+            margin-bottom: 0; 
+        }
+        #main-content .main-basic .col-text .mobile-cover {
+            height: 300px;
+        } 
+        .logo-group .g1 {
+            margin: 0 25.5%;  
+        }
+        .g2 .logo-inner-cont{ 
+          display: flex; 
+          justify-content: center; 
+          flex-flow: wrap;
+          flex-direction: row; 
+          gap: 20px; 
+        }
+        .g1 .logo-item{  
+          max-width: 200px;   
+          min-width: 180px;  
+        }
+        .g2 .logo-item {
+            padding: 0; 
+            margin-bottom: 0; 
+            width: 25%;  
+             
+        }
+        .comment-section .logo-title {
+            margin-bottom: 10px; 
+        } 
+        .logo-title{
+            margin-bottom: 20px;
+            font: 17px "Brandon bold";
+            letter-spacing: 0;  
+        }
+        .col-text{ 
+          order: 2;
+        } 
+        .g2{
+          order: 3;
+        }
+        .g2 .headtitle{
+          margin-bottom: 0px;  
+        }
+        .inner-g{
+          display: none;
+        }
+        .outer-g{
+          display: block;
+          margin-bottom: 0; 
+          margin-top: 0px;  
+          flex: 1;
+        }
+
+        .dis-tablet{
+          display: none;
+        }
+        .dis-mob{
+          display: block;
+        }
+
+        .static-area{
+          margin: 40px 0px 60px;     
+          font: 17px/24px "Brandon Regular";  
+          order: 3;  
+        } 
+        .static-icons-grid{  
+          margin-top:0px;   
+          grid-template-columns: repeat(auto-fill, 60px);
+        }
+      }
+
+      @media (max-width: 380px){ 
+        .static-area{
+          margin: 40px 0px 60px;     
+          font: 16px/24px "Brandon Regular";  
+          order: 3;  
+        } 
+        .static-icons-grid{  
+          margin-top:0px;   
+          grid-template-columns: repeat(auto-fill, 55px); 
+        }
+      }
+    </style>
+
+   
+  </head>
+
+  <body> 
+    <div class="main-wrapper " id="projects-wrapper">
+      <header id="main-header" data-aos="fade" data-aos-delay="300">
+        <nav class="navbar navbar-expand-xl navbar-dark">
+          <ul class="social-menu d-flex list-unstyled my-0">
+            <li>
+              <a href="#"> 
+                <img 
+                  src="assets/images/whatsapp.png"
+                  data-src="assets/images/whatsapp.png"
+                  class="lazyload"
+                  alt="whatsapp"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="assets/images/instgram.png"
+                  data-src="assets/images/instgram.png"
+                  class="lazyload"
+                  alt="instgram"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="assets/images/linkedin.png"
+                  data-src="assets/images/linkedin.png"
+                  class="lazyload"
+                  alt="linkedin"
+                />
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand p-0" href="index.html"> Singular Spain </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item" >
+                <a class="nav-link" id="hola" href="index.html#main-hola">Hola</a>
+                <ul class="sub-menu">
+                  <li class="nav-item"><a href="quees.html">Qué es</a></li>
+                  <li class="nav-item"><a href="protagonists.html">Protagonistas</a></li>
+                  <li class="nav-item"><a href="comovi.html">Cómo viajamos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item" id="rutas">
+                <a class="nav-link" href="rutas.html">RUTAS</a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="rutas.html">Las Rutas</a>
+                    <ul class="sub-sections">
+                      <li class="nav-item">
+                        <a href="route.html">LA MANCHA</a>
+                      </li>
+                      <li class="nav-item"><a href="#">SORIA</a></li>
+                      <li class="nav-item"><a href="#">ALPUJARRAS</a></li>
+                      <li class="nav-item"><a href="#">ÁVILA y SEGOVIA</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a href="activities.html">Actividades</a></li>
+                  <li class="nav-item">
+                    <a href="infoprac.html">Información práctica</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item" id="nosotras">
+                <a class="nav-link" href="nosotras.html">NOSOTRAS</a>
+                <ul class="sub-menu">
+                  <li class="nav-item"><a href="nosotras.html">Quiénes somos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item" id="contacta">
+                <a class="nav-link" href="contactus.html">CONTACTA</a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="contactus.html">Newsletter & Contacto</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item" id="Cuaderno">
+                <a class="nav-link last-child" href="blog.html">Cuaderno de Campo</a>
+              </li>
+              <li class="nav-item d-xl-none">
+                <a class="lang-trigger"> ENG</a> <span class="Brandon-Bold">&</span>
+                <a class="lang-trigger"> FRA</a>
+              </li>
+            </ul>
+          </div>
+          <div class="search-blk">
+            <button class="search-mobile d-xl-none" type="button"></button>
+            <input type="text" placeholder="Buscar" class="d-xl-block d-none" />
+            <button
+              class="search-icon d-xl-block d-none"
+              type="button"
+            ></button>
+          </div>
+
+          <div class="lang-blk d-xl-flex d-none">
+            <a class="lang-trigger current-lang"> ESP </a>
+            <a class="lang-trigger"> ENG</a>
+            <a class="lang-trigger"> FRA</a>
+          </div>
+        </nav>
+      </header> 
+
+      <main id="main-content">
+        <section class="main-basic "> 
+      
+      <section class="logo-groups-container">
+
+        <div class="logo-group ">
+          <div class="comment-section">
+            <div class="noso-fleuron"> 
+              <img
+                src="assets/images/black-leaf.png"
+                class="lazyload icon-leaf"
+                alt=""
+              /> 
+            </div> 
+              <p class="logo-title">Lo que dicen los viajeros:</p>  
+  
+            <div id="comment-carousel" class="comment-group carousel slide" data-ride="carousel">
+              <div class="carousel-inner">
+                <div class="comment-item carousel-item active"> 
+                  <p class="comment-desc">
+                    Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit, sed
+                    diam nonummy nibh. Solor sit
+                    amet, consectetuer piscing elit,
+                    sed diam.
+                  </p>
+                  <p class="comment-auth"> 
+                    Alberto, viajó con nosotras a la
+                    Ruta de Sur de Gredos
+                  </p>
+                </div>  
+                <div class="comment-item carousel-item">
+                  <p class="comment-desc">
+                    Lorem ipsum dolor sit amet,
+                    consectetuer adipiscing elit, sed
+                    diam nonummy nibh.
+                  </p>
+                  <p class="comment-auth"> 
+                    Alberto, viajó con nosotras a la
+                    Ruta de Sur de Gredos
+                  </p>
+                </div>
+                <div class="comment-item carousel-item">
+                  <p class="comment-desc">
+                    Comment 3 Comment 3 Comment 3 Comment 3 Comment 3
+                  </p>
+                  <p class="comment-auth"> 
+                    Author 3 Author 3 Author 3 Author 3 
+                  </p>
+                </div>  
+                
+              </div>  
+              <a class="nextArrow" href="#carouselExampleControls">
+                <img  src="assets/images/scroll-arrow.jpg"/>
+              </a>   
+            </div>  
+          </div>
+          
+          <div class="static-area dis-md">
+            <p><span class="Brandon-Bold">Objetivos de desarrollo sostenible (ODS) de la ONU para el 2030</span>
+              Con nuestras rutas de viaje colaboramos a crear impacto social, 
+              medioambiental y económico.</p>
+            
+            <div class="static-icons-grid">
+              <img class="img-responsive" src="assets/images/static-ico-1.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-2.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-3.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-4.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-5.jpg" />
+            </div> 
+          </div> 
+        </div> 
+
+         
+   
+        
+        <section class="logo-group"> 
+    
+          <div class="logo-section">
+  
+            <p class="logo-title headtitle">Qué dicen de nosotras:</p> 
+          <div class="g1">
+            <img 
+               src="assets/images/ny-logo.jpg" 
+               class="lazyload img-responsive logo-item"
+               alt="" 
+             />  
+             <img 
+               src="assets/images/nuevo-logo.jpg" 
+               class="lazyload img-responsive logo-item"
+               alt="" 
+             />   
+          </div> 
+          </div>
+
+          <div class="static-area dis-tablet">  
+            <p><span class="Brandon-Bold">Objetivos de desarrollo sostenible (ODS) de la ONU para el 2030</span>
+              Con nuestras rutas de viaje colaboramos a crear impacto social, 
+              medioambiental y económico.</p>
+            
+            <div class="static-icons-grid">
+              <img class="img-responsive" src="assets/images/static-ico-1.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-2.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-3.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-4.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-5.jpg" />
+            </div> 
+          </div> 
+
+          <section class="g2 inner-g"> 
+            <p class="logo-title headtitle">Nuestras colaboraciones:</p>
+             <div class="logo-inner-cont"> 
+              <img  
+              src="assets/images/hispania-r-logo.jpg" 
+              class="lazyload img-responsive logo-item"
+              alt="" 
+            />   
+            <img 
+              src="assets/images/difunde-r-logo.jpg" 
+              class="lazyload img-responsive logo-item"
+              alt="" 
+            />   
+            <img  
+              src="assets/images/factoria-r-logo.jpg"  
+              class="lazyload img-responsive logo-item"
+              alt=""  
+            />     
+             </div>
+              
+              
+        </section> 
+          
+            
+            
+      </section> 
+
+      </section>
+
+      <section class="grid-shell"> 
+        <img 
+          src="assets/images/nosotras-p.jpg" 
+          class=" cover lazyload img-responsive "
+          alt=""  
+        />  
+        <div class="static-area">
+          <p><span class="Brandon-Bold">Objetivos de desarrollo sostenible (ODS) de la ONU para el 2030</span>
+            Con nuestras rutas de viaje colaboramos a crear impacto social, 
+            medioambiental y económico.</p>
+          
+          <div class="static-icons-grid">
+            <img class="img-responsive" src="assets/images/static-ico-1.jpg" />
+            <img class="img-responsive" src="assets/images/static-ico-2.jpg" />
+            <img class="img-responsive" src="assets/images/static-ico-3.jpg" />
+            <img class="img-responsive" src="assets/images/static-ico-4.jpg" />
+            <img class="img-responsive" src="assets/images/static-ico-5.jpg" />
+          </div> 
+        </div>
+    </section>  
+        
+      
+          <section class="col-text"> 
+
+            <div class="section-overlay">
+              <img 
+                  src="assets/images/nosotras-p.jpg"
+                  class="lazyload img-responsive mobile-cover" 
+                  alt="" 
+                /> 
+              <div class="text-overlay"> 
+                <div class="fleuron-wrap "> 
+                  <h3 class="main-title">     
+                    La visión de María
+                  </h3>  
+                </div> 
+                <h4 class="title text-center ">
+                  Fundadora de Singular Spain  
+                </h4> 
+
+                
+
+                  <pre class="text-wrapper Libre-font-italic">Viajar por los campos españoles fue algo habitual durante mi infancia y juventud. Hacíamos en familia incursiones a lugares de los que por entonces no oía hablar en otro lugar que no fuera casa. Recuerdo pasar kilómetros eternos pegada a la ventanilla, dejando atrás hileras de árboles bordeando la carretera, cordilleras de montañas más o menos imponentes, ríos, bosques, campos interminables de cereales, pueblos partidos en dos, duros y sin un alma, paseantes al borde de pequeñas carreteras prometedoras, y muchas iglesias, monasterios y castillos salpicando los paisajes. Esa era la obsesión de mi padre, ir en busca de la historia. No había manera de escapar a su objetivo, y ahora estoy convencida de que su empeño, por acercarnos todo aquello, caló y me ha forjado esta querencia por lo rural y por querer divulgarlo a mi manera. Es una cuestión de orgullo, de amor, de interés por poner en valor nuestro legado cultural y natural, que desborda una diversidad y una calidad excepcionales, y que conforma nuestra identidad. Y por ello, con nuestros viajes queremos apoyar la labor de la prestigiosa asociación Hispania Nostra, que promueve desde 1976 la preservación de nuestro Patrimonio Cultural y Natural más vulnerable, acercándonos a joyas alejadas de los circuitos turísticos, y, por esto mismo, enormemente frágiles. Quiero realzar, muy especialmente, el esfuerzo y trabajo admirable que llevan a cabo personas extraordinarias para construir una nueva vida en el campo. No es cualquier cosa. Es un momento muy estimulante de cambios, de construcción, de empeño por querer hacer las cosas bien. Ellos son el motor de este proyecto, y les vamos a conocer.
+ 
+¿No te da curiosidad? 
+<img class="sig-img" src="assets/images/signature.jpg"/>  
+<span class="Pradell-Regular">María Pérez de Arenaza</span></pre> 
+                </div>
+                
+              </div> 
+              <div class="arrow-fixed">
+                <a href="contactus.html"> 
+                  <img
+                    src="assets/images/arrow-white.png"
+                    data-src="assets/images/arrow-white.png"
+                    class="lazyload"
+                    alt="arrow-white"
+                  />
+                </a>
+              </div> 
+              
+          </section>
+          
+         
+          <div class="static-area dis-mob">
+            <p><span class="Brandon-Bold">Objetivos de desarrollo sostenible (ODS) de la ONU para el 2030</span><br> 
+              Con nuestras rutas de viaje colaboramos a crear impacto social, 
+              medioambiental y económico.</p>
+            
+            <div class="static-icons-grid">
+              <img class="img-responsive" src="assets/images/static-ico-1.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-2.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-3.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-4.jpg" />
+              <img class="img-responsive" src="assets/images/static-ico-5.jpg" />
+            </div> 
+          </div> 
+          <section class="logo-group g2 outer-g"> 
+            <p class="logo-title headtitle">Nuestras colaboraciones:</p>
+             <div class="logo-inner-cont">
+              <img  
+              src="assets/images/hispania-r-logo.jpg" 
+              class="lazyload img-responsive logo-item"
+              alt="" 
+            />   
+            <img 
+              src="assets/images/difunde-r-logo.jpg" 
+              class="lazyload img-responsive logo-item"
+              alt="" 
+            />   
+            <img  
+              src="assets/images/factoria-r-logo.jpg"  
+              class="lazyload img-responsive logo-item"
+              alt=""  
+            />     
+             </div>
+              
+               
+        </section> 
+
+        </section>
+      </main>
+    </div>
+
+    <div
+      class="modal fade"
+      id="GalleryModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="GalleryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="" alt="" class="d-none" />
+            <p class="caption"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script src="assets/js/scripts.js?version=7"></script>
+    <script>
+      $(document).ready(function(){ 
+
+        var myCarousel = document.querySelector('#comment-carousel');
+        var carousel = new bootstrap.Carousel(myCarousel, { 
+          interval: false, 
+          wrap: true 
+        });    
+
+        $('.nextArrow').on("click", function() {
+          $('#comment-carousel').carousel('next');     
+        });
+
+      });
+    </script> 
+  </body>
+</html>

@@ -1,0 +1,1308 @@
+<html lang="en">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="ScreenOrientation" content="autoRotate:disabled" />
+    <title>Singular Spain</title>
+    <link rel="stylesheet" media="all" href="assets/css/aos.css" />
+    <link rel="stylesheet" href="assets/css/styles.css?version=41" /> 
+    <link rel="stylesheet" href="assets/css/basic-temp.css" /> 
+    <script src="assets/js/jquery.min.js"></script> 
+    <style>
+
+      #main-content .main-basic .col-text {
+          flex: 0 0 480px;
+          padding: 32.5px; 
+          margin: 0 auto; 
+          background-color: inherit;
+      } 
+      #main-content .main-basic .col-text .title {
+          font: 22px/38px "Brandon Bold";
+          padding: 0 20px;
+          letter-spacing: 0px;
+          margin-bottom: 25px;
+          margin-top: 25px;
+      }
+      #main-content .main-basic{
+        padding: 50px;  
+        padding-bottom: 0; 
+      }   
+      #main-content .fleuron-wrap img{
+        height: 42px;
+      }
+      #main-content .fleuron-wrap::after {
+          content: "";
+          width: 179px;
+          height: 4px;
+          display: block;  
+          margin: 25px auto 0;
+          background-color: #000;
+      }
+
+      .leftside{
+        order: 1;
+      } 
+      .policy-area{
+        order: 2;
+      }
+      .rightside{
+        order: 3;
+      }
+
+      .contact-content{ 
+        font: 21px/26px "Pradell";  
+        white-space: pre-wrap;   
+      } 
+
+      .contacta-section .contact-content{
+        margin-bottom: 60px; 
+      }
+      .newsletter-section .contact-content{
+        margin-bottom: 26px;
+      }
+      #main-content .main-basic .col-text .newsletter-section .title{ 
+        margin-bottom: 12px;  
+      }
+      .newsletter-section .title::after{
+        content: "";
+        display: block;
+        width: 52px; 
+        margin: 5px auto;    
+        height: 1px; 
+        background-color: black;  
+      } 
+      .newsletter-section .form-submit{
+        margin-top: 0; 
+      } 
+ 
+      /* FOOOOOOTER */
+ 
+      .contact-footer{  
+        display: flex; 
+        height: 124px; 
+        background-color: gray;
+        width: 100%;
+        font: 16px "Brandon Medium";  
+        padding-left: 80px; 
+        color: #cdcdcd;
+        align-items: center;
+        gap: auto;
+      }
+      .menu-flex { 
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr; 
+        flex: 1;
+      } 
+      .contact-footer .footer-item{ 
+        font: 16px "Brandon Medium";  
+        color: #cdcdcd; 
+        padding: 0 10px;   
+        margin: auto;   
+        text-align: left;  
+        white-space: nowrap;
+        max-width: 200px;  
+      }  
+      @media (min-width:1750px){ 
+        .contact-footer .footer-item{ 
+          text-align: center;  
+        }
+      }
+      @media (max-width:1750px){
+        .menu-flex {  
+          grid-template-columns: 1fr 1fr ; 
+        }
+      }
+      .footer-heads p{   
+        font: 16px "Brandon Medium"; 
+        color: #cdcdcd;
+        margin-bottom: 0;  
+        margin-right: 40px;
+      } 
+      /* .footer-heads p:first-child{  
+            margin-bottom: 10px;  
+      }    */
+      
+      .link-active{ 
+        text-decoration: underline !important;   
+        text-decoration-thickness: 2px !important;
+        text-underline-offset: 4px !important; 
+        font-family: "Brandon Bold" !important; 
+      } 
+      .contact-footer .footer-heads{ 
+        flex: 1;
+        max-width: 500px;  
+      } 
+      .contact-footer .footer-link{
+        margin-left: auto; 
+        color: #cdcdcd;  
+        margin-right: 60px; 
+        margin-left: 60px;  
+      }
+
+      .footer-drawer{
+        width: 100%;
+        background-color: inherit;
+        height: 0px; 
+        overflow: hidden; 
+      }
+      .content-cont{
+        display: block;
+        width: 814px; 
+        background-color: white;
+        margin: 60px auto;
+      }
+      #content{ 
+        padding: 50px; 
+        white-space: pre-wrap;
+        font: 18px/24px "Pradell"; 
+      }
+
+      .policy-area{
+        align-self: flex-end;
+        margin-bottom: 135px;   
+      }
+      .policy-area:before,
+      .policy-area:after{
+        content: "";
+        display: block;
+        width: 36px;  
+        margin: 0 auto;    
+        height: 1.5px;  
+        background-color: black;  
+      }
+      
+      .policy-text{ 
+        font: 12px/16px "Brandon Regular";
+        white-space: pre-wrap;
+        margin: 16px auto; 
+        width: fit-content; 
+        max-width: 195px; 
+        min-width: 140px;
+        overflow: hidden; 
+      }
+      .acorn-img{
+        display: none; 
+      }
+
+       
+      .logo-title{ 
+        font: 18px "Brandon Regular";      
+        letter-spacing: -0.5px;   
+        padding-right: 25px;
+        text-align: center; 
+      }   
+      /* .logo-group{ 
+        display: flex;
+        flex-direction: column;  
+        align-items: center;   
+        display: none;  
+        flex:1;  
+      }      */
+      #news-form,
+      #contact-form{
+        display: flex;
+        flex-direction: column; 
+      }
+      /* .g2 .logo-item{
+        max-height: 100px;
+        margin-bottom: 45px; 
+        padding: 0 50px; 
+        object-fit: contain;
+      } 
+      .g2 .logo-title{   
+        padding:0;
+      }  */
+
+      .scroll-anchor{
+        position: relative;
+        top: -200px; 
+        height: 1px;
+        width: 1px; 
+      }
+      
+      @media (min-width:1600px){
+        .footer-heads p {
+            float: left;  
+            margin-bottom: 0;
+        } 
+        .contact-footer .footer-heads{
+          max-width: 640px;   
+        }
+        .footer-item:nth-child(odd){  
+          margin-right: 40px;   
+        }  
+        
+      }
+      @media (max-width:1750px)
+      {
+        .contact-footer .footer-item{
+          flex : 40%;   
+          margin-right: auto;
+          align-self: center; 
+        } 
+        .contact-footer .footer-heads{
+          max-width: 410px;    
+        }
+        /* .footer-heads{
+          margin-right: 100px;  
+        } */     
+
+        .contact-footer .footer-link{
+          margin-left: 0;   
+        }
+        
+      }
+      /* @media (max-width:1400px){
+        .footer-heads{   
+          margin-right: 50px;  
+        }
+      } */
+      @media (max-width:1280px){
+        
+        .footer-heads{   
+          margin-right: 10px;    
+        }
+        .acorn-img{
+          display: block;
+        }
+        #main-content .main-basic {
+            padding: 25px;
+            padding-bottom: 20px;      
+        }
+        .contact-footer{
+          padding-left: 60px;    
+        }
+        .policy-area {
+            align-self: center;
+        } 
+
+        .leftside{
+          order: 1!important;
+        } 
+        .policy-area{ 
+          order: 2!important;
+        } 
+        .rightside{
+          order: 3!important; 
+        }
+        .acorn-img{
+          height: 30px;   
+        } 
+      }
+      @media (min-width:1199.9px){
+        .checkbox-round{
+          margin-top: -2px; 
+        }
+      }
+      @media (min-width:1199.9px){
+        .contact-footer .footer-item{
+          width: 100%; 
+          
+        }
+      }
+      @media (max-width:1199.9px){
+        #main-content .main-basic .col-text
+        { 
+          margin: 0;
+          flex: 0 0 430px; 
+        }
+        .accepto-label{
+          padding: 2px 0;       
+        }
+        .policy-area{
+          flex: 1; 
+        }
+        .footer-heads p:first-child{
+          margin-bottom: 0;  
+        }
+        .contact-content {
+            font: 18px/22px "Pradell";
+            white-space: pre-wrap; 
+        }
+        #main-content .main-basic .col-text .section-overlay .text-overlay .title {
+            font: 22px/35px "Brandon Bold"; 
+            margin: 18px 0; 
+        } 
+        #main-content .main-basic .col-text .section-overlay .text-overlay .newsletter-section .title { 
+          margin-bottom: 12px; 
+        }
+        #main-content .main-basic .col-text .text-overlay .fleuron-wrap::after {
+            height: 3px;
+            margin: 18px auto 0; 
+        }
+        .fleuron-wrap img {
+            height: 40px;
+        } 
+
+        .contact-footer{
+          flex-direction: column;
+          padding: 20px 40px 10px;  
+          font: 12px "Brandon Medium";  
+          align-items: flex-start; 
+        }
+        .menu-flex {
+            width: 100%; 
+            flex: 1;
+            row-gap: 0;  
+            width: 100%; 
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+  
+        }
+        .footer-heads p{ 
+            margin-right: auto;
+            font: 12px "Brandon Medium"; 
+            margin-right: 40px;   
+        } 
+        
+        .contact-footer .footer-item{  
+          margin: 0 auto; 
+          font: 14px "Brandon Medium";
+          padding: 0;        
+          flex: 1; 
+          max-width: inherit;     
+        }
+        .contact-footer .footer-item:first-child{  
+          margin-left: 0; 
+        }
+        .contact-footer .footer-link {
+          margin: 0;
+          margin-top: auto; 
+          color: #cdcdcd;   
+          flex: 1;
+        }
+        .footer-heads{
+          flex: 1;
+        }
+        .footer-heads p {  
+          float: left; 
+        } 
+        .content-cont { 
+          width: 620px;  
+        }
+        #content {
+            padding: 30px;
+            font: 16px/20px "Pradell";
+            letter-spacing: -0.3; 
+        } 
+      }
+
+      @media (max-width:1059px){  
+        #main-content .main-basic {
+            flex-direction: column;  
+            align-items: center;
+        } 
+        .policy-area{
+          margin-bottom: 0  ;
+          margin: 20px 0 ; 
+        }
+        .news-form{
+          margin-bottom: 0; 
+        }
+        #main-content .main-basic .rightside{     
+          margin-bottom: 20px;   
+        }
+        .policy-area:before, .policy-area:after{
+          height: 1px;  
+        }
+        
+      }
+
+      @media (max-width: 767.8px){ 
+        .logo-group{ 
+          display: block;
+        }  
+        #main-content .main-basic {
+          padding: 35px;  
+        } 
+        #main-content .main-basic .col-text{ 
+          padding: 0;
+        }
+        #main-content .main-basic .col-text .section-overlay .text-overlay .title{
+          margin: 23px 0;  
+        }
+        #main-content .main-basic .rightside .section-overlay .text-overlay .title{
+          margin-bottom: 16px;     
+        }
+        #main-content .main-basic .col-text .text-overlay .fleuron-wrap::after{
+          margin: 21px auto 0;  
+        }
+        .contact-content {
+          font: 20px/26px "Pradell";
+        }
+        .link-active{
+          text-underline-offset: 2px !important; 
+        }
+        .contact-footer{
+          padding: 15px 20px 0px; 
+        }
+        .footer-heads p {
+          margin-right: auto;
+          font: 10px "Brandon Medium"; 
+          float: none;  
+        }
+        
+        /* .footer-heads p:first-child {
+            margin-bottom: 5px; 
+        } */
+        .contact-footer .footer-item{
+          font: 10px "Brandon Medium";
+          flex: 50%;  
+          margin-left: 0;  
+        }  
+        .menu-flex{
+          row-gap: 0;   
+          grid-template-columns: 1fr 1fr;  
+        }
+        .content-cont {
+            width: 85%;
+            margin-top: 35px;
+        }
+        .footer-drawer{         
+        }
+        .formu-submit-msg {
+          font: 14px/20px "Pradell Italic"; 
+        }
+        #content { 
+          padding: 20px 20px;
+          font: 12px/16px "Pradell";  
+        }
+        .newsletter-feedback{
+          height: 35px !important;      
+        } 
+        #news-form,
+        #contact-form{    
+          margin-bottom: 8px;
+        }
+  
+        .policy-area {
+            margin: 30px 0 50px 0;   
+        }
+
+        .contact-feedback{
+          height: 40px !important;     
+        }  
+
+        /* LOGOS */
+          /* .g2 .logo-inner-cont{ 
+            display: flex;  
+            justify-content: center; 
+            flex-flow: wrap;
+            flex-direction: row; 
+            gap: 20px; 
+          }
+          .logo-group{
+            max-width: 100%;   
+            order: 1;    
+            margin-bottom: 0;
+            margin-top: 25px;            
+          }
+          .g2 .logo-item {
+            padding: 0; 
+            margin-bottom: 0; 
+            align-self: center;
+            width: 25%;  
+        }
+        .g2{
+          order: 4;  
+        } 
+        .logo-title{
+            margin-bottom: 20px;
+        }  */
+      }
+      /* ////////////////////////////////////////////////  INPUTS STYLING  ////////////////////////////////////// */ 
+      .main-contact label{
+        font: 12px/26px "Brandon Regular";
+        letter-spacing: 0.7px;
+      }
+      .main-contact textarea{ 
+        font: 16px/12px "Pradell Italic"; 
+        resize:none; 
+        border: none;   
+        border-radius: 0;
+        padding: 15px 7px !important;   
+      }  
+      .main-contact .form-control{ 
+        font: 16px/12px "Pradell Italic";  
+        letter-spacing: 0.7px; 
+        border: none; 
+        height: 40px;  
+        border-radius: 0;
+        padding: 5px 7px;   
+      } 
+
+      
+ 
+      /* CHECKBOX */
+      .form-check{
+        padding-top: 10px;
+        align-self: center; 
+      }
+      .form-check-label{
+        font: 16px/12px "Pradell Italic" !important;   
+        color: darkgray;
+        letter-spacing: 0.7px;  
+      }
+      
+
+      /* TEXT GROUP */
+      .text-input-group{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap; 
+        grid-column-gap: 53px;     
+      }
+      .text-input-group .g{ 
+        flex: 30%;  
+      }
+      .main-contact .text-input-group .form-check{ 
+        flex: 30%;  
+        padding-left: 7px;
+        height: 40px;
+      } 
+
+      .form-control:focus{ 
+        border: none !important; 
+        box-shadow: none !important;
+      }
+      form-control::placeholder,
+      form-control::-ms-input-placeholder,
+      form-control:-ms-input-placeholder,
+      form-control::-webkit-input-placeholder{
+        color: red !important; 
+      } 
+      form-control:-moz-placeholder,
+      form-control::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    #909 !important;
+        opacity:  1 !important; 
+      } 
+      
+      .h-80{  
+        height: 80px !important;
+      }
+
+      .checkbox-round,
+      .form-check-input { 
+          width: 15px;
+          height: 15px;   
+          background-color: inherit; 
+          border-radius: 50%; 
+          margin-left: 3px; 
+          border: 3px solid #8e8e8e; 
+          appearance: none;
+          -webkit-appearance: none;
+          outline: none;
+          cursor: pointer;
+      } 
+
+      .form-check-input{ 
+        vertical-align: top;
+      }
+ 
+      .checkbox-round:checked,
+      .form-check-input:checked {  
+          background-color: gray !important;
+          border: none !important; 
+          background-image: none !important;
+          box-shadow: none !important;
+      }
+      .form-check .form-check-input {
+          float: none;
+          margin-left: 0; 
+
+      }
+      .main-l{  
+        padding-left: 10px !important;
+      } 
+      .policy-chk{  
+        margin-left: 10px !important;
+        float:left; 
+      } 
+      .form-submit{
+          font: 18px "Brandon Bold";
+          margin: auto;
+          background-color: white;
+          border-radius: 0;
+          width: 120px;  
+          transition: 0.1s;
+          height: 40px;
+          margin-top: 0px;
+          text-underline-offset: 4px;  
+          text-decoration: underline;
+      }  
+      .form-submit:disabled{
+        color: darkgray;
+        background: white;
+        border: none;
+        opacity: 1; 
+      }  
+      .form-submit:hover{background-color: white !important;}  
+      .form-submit:focus{
+        
+        background-color:white !important; 
+        color: black !important;  
+        border: none;
+        outline: none;
+        box-shadow: none; 
+      } 
+      .form-submit:active{
+        background-color:black !important; 
+        color: white !important; 
+        border: none;
+        outline: none;
+        box-shadow: none;
+      } 
+  
+      .center-cont{
+        display: flex; 
+        text-align: center;
+        justify-content: center;
+        align-items: center;  
+      }
+      .formu-submit-msg{
+        font: 19px/26px "Pradell Italic";  
+        margin: 0;
+        height: 40px; 
+        text-align: center;   
+      }
+
+      /* FEEDBACK */
+      .newsletter-feedback{
+        font: 12px "Brandon Regular"; 
+        height: 42px;
+        color: #dd2c2c; 
+        letter-spacing: 0px; 
+      }
+      .contact-feedback{
+        font: 12px "Brandon Regular"; 
+        height: 50px;  
+        color: #dd2c2c; 
+        letter-spacing: 0px; 
+      }
+  </style> 
+
+   
+  </head>
+
+  <body> 
+    <div class="main-wrapper " id="projects-wrapper">
+      <header id="main-header" data-aos="fade" data-aos-delay="300">
+        <nav class="navbar navbar-expand-xl navbar-dark">
+          <ul class="social-menu d-flex list-unstyled my-0">
+            <li>
+              <a href="#"> 
+                <img 
+                  src="assets/images/whatsapp.png"
+                  data-src="assets/images/whatsapp.png"
+                  class="lazyload"
+                  alt="whatsapp"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="assets/images/instgram.png"
+                  data-src="assets/images/instgram.png"
+                  class="lazyload"
+                  alt="instgram"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <img
+                  src="assets/images/linkedin.png"
+                  data-src="assets/images/linkedin.png"
+                  class="lazyload"
+                  alt="linkedin"
+                />
+              </a>
+            </li>
+          </ul>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand p-0" href="index.html"> Singular Spain </a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+              <li class="nav-item" >
+                <a class="nav-link" id="hola" href="index.html#main-hola">Hola</a>
+                <ul class="sub-menu">
+                  <li class="nav-item"><a href="quees.html">Qué es</a></li>
+                  <li class="nav-item"><a href="protagonists.html">Protagonistas</a></li>
+                  <li class="nav-item"><a href="comovi.html">Cómo viajamos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item" id="rutas">
+                <a class="nav-link" href="rutas.html">RUTAS</a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="rutas.html">Las Rutas</a>
+                    <ul class="sub-sections">
+                      <li class="nav-item">
+                        <a href="route.html">LA MANCHA</a>
+                      </li>
+                      <li class="nav-item"><a href="#">SORIA</a></li>
+                      <li class="nav-item"><a href="#">ALPUJARRAS</a></li>
+                      <li class="nav-item"><a href="#">ÁVILA y SEGOVIA</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item"><a href="activities.html">Actividades</a></li>
+                  <li class="nav-item">
+                    <a href="infoprac.html">Información práctica</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item" id="nosotras">
+                <a class="nav-link" href="nosotras.html">NOSOTRAS</a>
+                <ul class="sub-menu">
+                  <li class="nav-item"><a href="nosotras.html">Quiénes somos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item" id="contacta">
+                <a class="nav-link" href="contactus.html">CONTACTA</a>
+                <ul class="sub-menu">
+                  <li class="nav-item">
+                    <a href="contactus.html">Newsletter & Contacto</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item" id="Cuaderno">
+                <a class="nav-link last-child" href="blog.html">Cuaderno de Campo</a>
+              </li>
+              <li class="nav-item d-xl-none">
+                <a class="lang-trigger"> ENG</a> <span class="Brandon-Bold">&</span>
+                <a class="lang-trigger"> FRA</a>
+              </li>
+            </ul>
+          </div>
+          <div class="search-blk">
+            <button class="search-mobile d-xl-none" type="button"></button>
+            <input type="text" placeholder="Buscar" class="d-xl-block d-none" />
+            <button
+              class="search-icon d-xl-block d-none"
+              type="button"
+            ></button>
+          </div>
+
+          <div class="lang-blk d-xl-flex d-none">
+            <a class="lang-trigger current-lang"> ESP </a>
+            <a class="lang-trigger"> ENG</a>
+            <a class="lang-trigger"> FRA</a>
+          </div>
+        </nav>
+      </header> 
+      
+
+      <main id="main-content">
+        <section class="main-basic main-contact"> 
+    
+          <section class="col-text rightside">
+            <div class="section-overlay">
+              <div class="text-overlay">
+                <div class="fleuron-wrap ">
+                  <img
+                    src="assets/images/black-leaf.png"
+                    class="lazyload icon-leaf"
+                    alt=""
+                  />
+                </div> 
+
+                <h4 class="title text-center ">
+                  FORMULARIO  
+                </h4> 
+                
+                <form id="contact-form" novalidate>
+
+                  <!-- INPUTS -->
+                  <label for="tf1">¿OS INTERESA UNA DE NUESTRAS PROPUESTAS?</label>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Dinos cuál" id="tf1" name="tf1"> 
+                  </div> 
+   
+                  <label for="tf2">¿OS INTERESA OTRA ZONA EN PARTICULAR?</label>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Dinos qué zona y te preparamos una propuesta" id="tf2" name="tf2"> 
+                  </div> 
+  
+                  <label for="tf3">TENEMOS UNA CONSULTA</label>
+                    <div class="input-group mb-3">
+                      <textarea class="form-control h-80" rows="4" cols="50" placeholder="Cualquier otra consulta o comentario" id="tf3" name="tf3"></textarea>  
+                  </div> 
+                  
+                  <label for="tf4">¿QUIÉN ES LA PERSONA REPRESENTANTE?</label>
+                    <div class="input-group mb-3">
+                      <input type="text" class="form-control" placeholder="Nombre y Apellidos" id="tf4" name="tf4"> 
+                  </div> 
+  
+                  <div class="text-input-group">
+                    <div class="g">
+                      <label for="tf5">IDIOMA DE CONTACTO</label> 
+                      <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" placeholder="El que prefieras" id="tf5" name="tf5"> 
+                      </div> 
+                    </div>
+  
+                    <div class="g">
+                      <label for="tf6">PAÍS DE RESIDENCIA</label> 
+                      <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" placeholder="País" id="tf6" name="tf6"> 
+                      </div> 
+                    </div>
+  
+                    <div class="g">
+                      <label for="ef1">EMAIL*</label> 
+                      <div class="input-group mb-3"> 
+                        <input id="contact-form-email" type="email" class="form-control" placeholder="Email de contacto" id="ef1" name="ef1" >    
+                      </div> 
+                    </div>
+  
+                    <div class="g">
+                      <label for="tf7">TELÉFONO</label> 
+                      <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" placeholder="Con código de país" id="tf7" name="tf7"> 
+                      </div> 
+                    </div>
+                    
+                    <div class="g">
+                      <label for="tf8">¿CUÁNTOS VIAJEROS SOIS?</label> 
+                      <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" placeholder="Número de personas" id="tf8" name="tf8">  
+                      </div> 
+                    </div>
+                    
+                    <div class="g">
+                      <label for="tf9">¿EDAD DE LOS ADULTOS?</label> 
+                      <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" placeholder="Edad media" id="tf9" name="tf9">  
+                      </div> 
+                    </div>
+                    
+                    <div class="g">
+                      <label for="tf10">¿VIAJÁIS CON NIÑOS?</label> 
+                      <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" placeholder="¿Qué edades tienen?" id="tf10" name="tf10">  
+                      </div> 
+                    </div>
+                    
+                    <div class="g">
+                      <label for="tf11">FECHAS QUE OS INTERESAN</label>  
+                      <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" placeholder="¿Cuándo queréis viajar?" id="tf11" name="tf11">  
+                      </div> 
+                    </div>
+                    
+                    <div class="g">
+                      <label for="tf12">¿CUÁNTOS DÍAS?</label>   
+                      <div class="input-group mb-3">  
+                        <input type="text" class="form-control" placeholder="Días" id="tf12" name="tf12">  
+                      </div> 
+                    </div>
+  
+                    <!-- CHECKBOX -->
+                    <div class="g" >
+                      <label>NEWSLETTER</label>  
+  
+                      <div class="form-check">
+                        <label class="form-check-label" for="sub_chk">
+                          Subscribir
+                        </label>   
+                        <input class="checkbox-round" type="checkbox" style="vertical-align: middle; " value="" id="sub_chk" checked>
+                      </div>  
+    
+                    </div>
+                  </div> 
+  
+                  <!-- RADIOS -->
+                  <label for="rg1">¿QUÉ TIPO DE ALOJAMIENTO OS INTERESA?</label>
+                    <div class="input-group mb-3">
+                      <div class="form-check main-l">
+                        <label class="form-check-label"> 
+                          Alojamiento de 
+                        </label> 
+                      </div>
+  
+                      <div class="form-check">
+                        <label class="form-check-label" for="ar3">
+                          3
+                        </label>  
+                        <input class="form-check-input" type="radio" name="Alojamiento" value="" id="ar3">
+                      </div> 
+                      <div class="form-check">
+                        <label class="form-check-label" for="ar4">
+                          4
+                        </label>  
+                        <input class="form-check-input" type="radio" name="Alojamiento" value="" id="ar4" checked> 
+                      </div>
+                      <div class="form-check">
+                        <label class="form-check-label" for="ar5">  
+                          5 
+                        </label>  
+                        <input class="form-check-input" type="radio" name="Alojamiento" value="" id="ar5">
+                      </div>
+  
+                      <div class="form-check main-l">
+                        <label class="form-check-label"> 
+                          estrellas 
+                        </label> 
+                      </div>
+                  </div>
+
+                    <div>
+                    <label class="float-left accepto-label form-check-label" for="policy_chk_contact">
+                      Acepto la Política de Protección de Datos*
+                    </label>    
+                    <input class="checkbox-round policy-chk" type="checkbox" value="" name="policy_chk_contact" id="policy_chk_contact">
+                   </div>  
+ 
+                   <div class="contact-feedback  center-cont">   
+                    </div>
+ 
+                    <div class="center-cont">
+                      <button id="contact-submit" class="btn form-submit" type="submit" disabled>ENVIAR</button>   
+                    </div>
+                </form>
+
+                <div class="center-cont"> 
+                  <img class="acorn-img" src="assets/images/acorn-ico.jpg"/> <p id="contactSubmitMsg" class="formu-submit-msg"></p>  
+                </div>
+
+
+              </div> 
+            </div>
+          </section>
+
+          <section class="policy-area">
+                <pre class="policy-text">
+Los datos recopilados en este Formulario y Newsletter son para estar en contacto contigo y enviarte información relacionada con Singular Spain. Para más información revisa nuestra <a href="javascript:void(0);" onclick="expandPoliticia();" class="underlined-link Brandon-Bold underlined">Política de Privacidad.</a> 
+Puedes cambiar de opinión en cualquier momento escribiendo a mariaparenaza@singular-spain.com *Al pulsar Enviar, aceptas la política de protección de datos.</pre>  
+          </section>    
+
+          <section class="col-text leftside">
+            <div class="section-overlay">
+              <div class="text-overlay">
+                <div class="fleuron-wrap ">
+                  <img
+                    src="assets/images/black-leaf.png"
+                    class="lazyload icon-leaf"
+                    alt=""
+                  />
+                </div> 
+
+                <div class="contacta-section">
+
+                  <h4 class="title text-center ">
+                    CONTACTA  
+                  </h4> 
+
+                  <pre class="contact-content">Tenemos una serie de rutas por las zonas que os proponemos <a href="rutas.html"  class="underlined-link Pradell-Bold underlined">aquí</a>.  
+ 
+Decidnos en el Formulario qué zona os interesa y os mandamos una propuesta.   
+ 
+<span class="Pradell-Italic">Pero si os atrae otra zona en particular, contáctanos también y organizamos una nueva ruta para vosotros.</span> 
+     
+<span class="Pradell-Italic">Os podéis poner en contacto con nosotras también en:</span>
+mariaparenaza@singular-spain.com 
+Tel. +34 629 35 36 96  
+Madrid, Spain
+                  </pre>
+                </div>
+
+                <div class="newsletter-section">
+ 
+                  <h4 class="title text-center ">
+                    NEWSLETTER  
+                  </h4> 
+                  
+                  <pre class="contact-content">Si quieres estar informado de nuestras actividades, nuevas rutas, suscríbete a nuestro Newsletter y te tendremos informado.</pre> 
+
+                  <!-- INPUTS -->
+                  <form id="news-form">  
+                    <label for="nl-phone">NOMBRE</label>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Nombre y Apellido" id="nl-phone" name="nl-phone"> 
+                    </div> 
+     
+                    <label for="nl-email">EMAIL*</label>
+                      <div class="input-group mb-3"> 
+                        <input type="text" class="form-control" placeholder="Dónde te la enviamos" id="nl-email" name="nl-email" > 
+                    </div> 
+                    
+                    <div>
+                    <label class="float-left accepto-label form-check-label" for="policy_chk_news"> 
+                      Acepto la Política de Protección de Datos*
+                    </label>      
+                    <input class="checkbox-round policy-chk" type="checkbox" value="" name="policy_chk_news" id="policy_chk_news" > 
+                  </div>
+
+                    <div class="newsletter-feedback  center-cont">   
+                      
+                    </div>  
+
+                    <div class="center-cont">
+                      <button id="news-submit" class="btn form-submit" type="submit" disabled>ENVIAR</button>    
+                    </div> 
+
+
+                  </form>
+                  
+                  <div class="center-cont">
+                    <img class="acorn-img" src="assets/images/acorn-ico.jpg"/>  <p id="newsSubmitMsg" class="formu-submit-msg"></p> 
+                  </div> 
+
+                </div>
+                
+
+
+              </div> 
+            </div>
+          </section>      
+
+
+          <!-- VALIDATION LINK -->
+          <!-- https://getbootstrap.com/docs/4.0/components/forms/ -->
+        </section>
+      </main>
+
+      <footer class="contact-footer">
+          <span class="scroll-anchor"></span>
+          <div class="footer-heads">
+            <p >Registro de Empresas Turísticas CICMA 4364 Madrid</p> 
+            <p >© Singular Spain 2022</p> 
+          </div>
+          <div class="menu-flex">
+            <a class="footer-item" href="javascript:void(0);" onclick="">CONDICIONES DE CONTRATO</a>
+            <a class="footer-item" href="javascript:void(0);" onclick="">AVISO LEGAL</a>
+            <a id="politica" class="footer-item" href="javascript:void(0);" onclick="">POLÍTICA de PRIVACIDAD</a> 
+            <a class="footer-item" href="javascript:void(0);" onclick="">POLÍTICA de COOKIES</a> 
+          </div>
+          <a href="https://www.obisk.com" target="_blank" class="footer-link">Diseño: Borja Goyarrola</a>
+  
+      </footer> 
+ 
+      <section class="footer-drawer">
+        <div class="content-cont">
+          <pre id="content"><span class="Brandon-Bold">AVISO LEGAL</span> 
+
+<span class="Brandon-Bold">Responsable</span> 
+www.singularspain.com.es es un dominio en Internet titularidad de SINGULAR SPAIN, en adelante la EMPRESA.
+
+De conformidad con el artículo 10 de la Ley 34/2002 , de 11 de julio, de "Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI)" y el RDL (Real Decreto Ley) 23/2018, se informa que la empresa encargada de la gestión y funcionamiento del sitio Web es:
+
+<span class="Brandon-Medium">Denominación comercial:</span> SINGULAR SPAIN 
+<span class="Brandon-Medium">Nombre:</span> María Pérez de Arenaza Lamana 
+<span class="Brandon-Medium">NIF:</span> 07234103M 
+<span class="Brandon-Medium">Dirección:</span> C/Valderrey, 35  
+<span class="Brandon-Medium">Nombre del dominio:</span> www.singularspain.com.es 
+<span class="Brandon-Medium">Correo electrónico:</span> mariaparenaza@singular-spain.com 
+<span class="Brandon-Medium">Teléfono:</span> 629353696 Actividad: Agencia de Viajes Combinados
+
+<span class="Brandon-Bold">Legislación</span> 
+<span class="underlined">Uso y acceso de usuarios</span> 
+El Usuario queda informado y acepta que el acceso a la presente web no supone, en modo alguno, el inicio de una relación comercial con la EMPRESA.
+El usuario se compromete a utilizar la página web de conformidad con la ley, el presente Aviso Legal y las exigencias de la buena fe, empleando la diligencia adecuada a la naturaleza del servicio del que disfruta, sin incurrir en actividades que puedan ser consideradas ilícitas o ilegales, que infrinjan los derechos de la EMPRESA o de terceros, o que puedan dañar, inutilizar, sobrecargar o deteriorar el servicio o impedir la normal utilización del mismo.
+
+En concreto y con carácter meramente enunciativo, el usuario deberá abstenerse de:
+• Reproducir, copiar, distribuir, poner a disposición, comunicar públicamente, transformar o modificar los contenidos de la página salvo en aquellos casos autorizados por la ley o expresamente consentidos por la EMPRESA o por el tercero que, en su caso, ostente los derechos de explotación sobre los mismos. 
+ 
+•Reproducir o copiar para uso privado los contenidos que merezcan la consideración de software
+o Bases de Datos de conformidad con la legislación vigente, así como comunicarlos públicamente
+o ponerlos a disposición de terceros.
+* Utilizar los contenidos de la página web para cualquier tipo de actividad publicitaria o</pre>
+        </div>
+      </section>
+    </div>
+    <div
+      class="modal fade"
+      id="GalleryModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="GalleryModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <img src="" alt="" class="d-none" />
+            <p class="caption"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="assets/js/aos.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.footer-item').on('click', function (e) {  
+  
+          
+            if ($(this).hasClass("link-active")){
+
+              $(this).removeClass("link-active"); 
+              $('.footer-drawer').animate({
+                  "height": "0px"   
+              }, "slow"); 
+              
+            }
+            else
+            {
+              $('.footer-item').each(function(){
+                // var value = $(this).hasClass("link-active");
+                $(this).removeClass("link-active");
+              });  
+              // $('.footer-drawer').parent().next("div").css("height", "100%"); 
+              // var h = $('.footer-drawer').parent().next("div").height();
+              // $('.footer-drawer').parent().next("div").css("height", "0px");
+
+               
+              $(this).addClass("link-active");  
+              $('.footer-drawer').animate({  
+                  "height": "1500px"       
+              }, "slow", function () {  
+                var element = document.querySelector(".scroll-anchor");    
+                // $("html, body").animate({ scrollTop: $("#content").offset().top }, 800);  
+                element.scrollIntoView({ behavior: 'smooth', block: 'start' });        
+              });      
+
+              
+            } 
+
+              
+        });
+        
+        
+       
+        
+        // Contact
+        // VALIDATION
+        var contact_submitted = false
+        'use strict'; 
+        $('#contact-form').on('submit', function() {
+            // do validation here
+            email = $("#contact-form-email").val().toString().trim()
+            if(isEmail(email))
+            {
+              $('#contactSubmitMsg').html('¡Muchas gracias por vuestro interés!<br> Nos pondremos en contacto en los próximos días'); 
+              $('.rightside .acorn-img').css('display', 'none');    
+              $('#contact-submit').prop('disabled', true);   
+              contact_submitted = true 
+            } 
+            else
+            {
+              $('.contact-feedback').text('El email no parece correcto') ; 
+              lastEmailVal = $('#contact-form-email').val(); 
+            }
+
+            event.preventDefault();  
+            event.stopPropagation(); 
+        }); 
+
+
+        //Listeners
+        var contact_accept = false;
+        var contact_emailVal = "";
+        var contact_lastEmailVal = "";
+        $("#policy_chk_contact").change(function() {
+            if(this.checked)  
+              contact_accept = true;
+            else
+              contact_accept = false;
+
+              validateNewsletter('#contact-submit',contact_emailVal,contact_accept,contact_submitted);
+        }); 
+        $('#contact-form-email').on("input", function() {
+            var dInput = this.value;
+            contact_emailVal = dInput ;
+            validateNewsletter('#contact-submit',contact_emailVal,contact_accept,contact_submitted);  
+
+            $('.contact-feedback').text('') ;    
+        });
+
+
+
+        //  NEWSLETTER
+         // VALIDATION
+         var news_submitted = false
+        $('#news-form').on('submit', function() {
+            // do validation here
+            email = $("#news-form #nl-email").val().toString().trim()
+            if(isEmail(email))
+            {
+              $('#newsSubmitMsg').text('Estupendo! Pronto recibirás nuestra próxima Newsletter.');
+              $('.leftside .acorn-img').css('display', "none");  
+              $('#news-submit').prop('disabled', true);  
+              news_submitted = true
+            }   
+            else
+            {
+              $('.newsletter-feedback').text('El email no parece correcto') ; 
+              
+              lastEmailVal = $('#nl-email').val();
+            }
+
+            event.preventDefault(); 
+            event.stopPropagation(); 
+        }); 
+
+        //Listeners
+        var news_accept = false;
+        var news_emailVal = "";
+        var news_lastEmailVal = "";
+        $("#policy_chk_news").change(function() {
+            if(this.checked)  
+              news_accept = true;
+            else
+              news_accept = false;
+
+              validateNewsletter('#news-submit',news_emailVal,news_accept,news_submitted);
+        }); 
+        $('#nl-email').on("input", function() {
+            var dInput = this.value;
+            news_emailVal = dInput ;
+            validateNewsletter('#news-submit',news_emailVal,news_accept,news_submitted); 
+
+            $('.newsletter-feedback').text('') ;   
+        });
+        
+          
+        
+      });  
+      
+
+      function validateNewsletter(submitID,EV,acc,submitted){ 
+        if (EV != '' && acc && !submitted)   
+        {
+          $(submitID).prop('disabled', false); 
+        }
+        else
+        {
+          $(submitID).prop('disabled', true);   
+        }
+      }  
+      function isEmail(email) {
+        var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+      }
+
+      function expandPoliticia(){
+        $( "#politica" ).click();  
+      }
+
+    </script>
+    <script src="assets/js/scripts.js?version=7"></script>
+  </body>
+</html>

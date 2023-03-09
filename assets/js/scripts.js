@@ -7,6 +7,10 @@ function initiateAnimation() {
   });
 }
 function windowSize() {
+// change cta-3 width 
+$(".call-to-actions-items .cta-3").css("min-width", $(".call-to-actions-items .cta-1").outerWidth() );
+
+//Projects page --> change gallery modal width 
   if (jQuery(window).width() >= 1540) {
     $("#GalleryModal .modal-dialog")
       .addClass("modal-xl")
@@ -21,6 +25,7 @@ function windowSize() {
       .removeClass("modal-xl")
       .removeClass("modal-lg");
   }
+
 }
 initiateAnimation();
 
@@ -36,7 +41,7 @@ $(document).ready(function () {
   setTimeout(function(){
     $("#main-home .text-overlay").removeClass("opacity-0").addClass("fade-animate");
   }, 800);
-  
+  // search Box in header
   $(".search-blk input").on("input", function () {
     $(this).parents(".search-blk").find(".search-icon").addClass("active");
     if ($(this).val() == "") {
@@ -50,7 +55,8 @@ $(document).ready(function () {
     $(this).parents(".search-blk").find("input").toggleClass("d-none");
     $(this).parents(".search-blk").find(".search-icon").toggleClass("d-none");
   });
-
+// end Search
+// Hola effect 
   if (window.location.hash == "#main-hola") {
     $(".main-hola").addClass("extrnal-animate");
     $("#hola").addClass("active");
@@ -69,7 +75,7 @@ $(document).ready(function () {
       $(".main-hola").addClass("extrnal-animate");
     }
   });
-  // if user clicked hola's arrow from home
+// if user clicked hola's arrow from home
   $("#main-home .arrow-fixed a").on("click", function () {
     let section_id = $(this).attr("href");
     $("#hola").addClass("active");   
@@ -77,16 +83,17 @@ $(document).ready(function () {
     $("#main-home").removeClass("layered-home");
   });
 
-  // if user back to main-home form hola
+// if user back to main-home form hola
   $(document).on("click", ".navbar-brand", function () {
     $("#hola").removeClass("active");
   });
-
+// Read more Options
   $(document).on("click", ".text-controls .read-options", function () {
     $(this).find("span").toggleClass("d-none");
     $(this).parents().find(".text-wrapper").toggleClass("truncated");
   });
-
+// Projects page ex:la mancha
+// Projects list 
   $(document).on("click", ".project-menu li", function () {
     $(".project-menu li")
       .not($(this))
@@ -95,9 +102,9 @@ $(document).ready(function () {
       .addClass("d-none");
     $(this).toggleClass("active").find(".details").toggleClass("d-none");
   });
+// Images Grid
   $(document).on("click", ".openImgModal", function (e) {
     e.preventDefault();
-    // Audio Data
     $(this).addClass("current-img");
     var ImgSource = $(this).attr("data-img");
     var ImgCaption = $(this).attr("data-caption");
@@ -114,3 +121,4 @@ $(document).ready(function () {
     windowSize();
   });
 });
+ 

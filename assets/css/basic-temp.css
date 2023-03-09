@@ -1,0 +1,73 @@
+
+#main-content .main-basic .fleuron-wrap {
+    padding-bottom: 0;
+}  
+
+.main-basic .col-text .title{
+  letter-spacing: 0px;
+}
+
+@media (min-width: 1860px){
+  #main-content .Pradell-font {
+      font: 21px/26px "Pradell"; 
+  } 
+}
+
+/* Med computer */
+@media (max-width: 1859px) and (min-width: 1700px){
+    
+
+      
+  } 
+  @media (max-width: 1199.9px){
+    #main-content .main-basic .col-text{ 
+        height: auto;
+    }
+  }  
+  /* Tablets */
+  @media (min-width: 767.9px) and (max-width: 1199.9px){
+
+    #main-content .main-basic .col-text{
+      flex: 0 0 460px; 
+      max-width: 460px; 
+    }   
+    #main-content .main-basic  { 
+      padding: 45px;
+    } 
+    #main-content .main-basic .col-text{
+      padding: 30px;  
+      /* padding-bottom: 0px;  */
+    }
+    #main-content .main-basic .col-text .text-overlay .fleuron-wrap::after {
+        height: 3px;
+        margin: 14px auto 0;
+    }
+    #main-content .main-basic .col-text .title {
+        font: 20px/35px "Brandon Bold";
+        margin-top: 22px;
+        margin-bottom: 22px;  
+    }  
+
+    #main-content .main-basic .col-text .mobile-cover {
+        display: block;
+        height: 375px;   
+        margin-bottom: 22px;
+    } 
+
+  }  
+
+  /* mobile screen */
+  @media (max-width: 767.9px){
+      
+
+  }  
+
+  /* meduim mobile screen */
+  @media (max-width: 580px){
+      
+  } 
+
+  /* Small mobile screen */
+  @media (max-width: 380px){
+       
+  } 

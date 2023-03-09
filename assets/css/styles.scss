@@ -7,7 +7,8 @@ $body-color: #000;
 $theme-colors: (
     "primary": #3fa6f2,
     "secondary": #ff1d25,
-    "dark_red": #be272d,
+    "brown": #603813,
+    "dark-red": #be272d,
 );
 $transition: (
     main: all 0.4s ease,
@@ -23,6 +24,7 @@ $transition: (
 @font-face {
     font-family: "Brandon Bold";
     src: url("../fonts/Brandon/HVD\ Fonts\ -\ BrandonText-Bold.otf");
+    font-style: bold;
 }
 
 @font-face {
@@ -36,13 +38,23 @@ $transition: (
 }
 
 @font-face {
-    font-family: "Brandon Regular Italic";
+    font-family: "Brandon Light";
+    src: url("../fonts/Brandon/HVD\ Fonts\ -\ BrandonText-Light.otf");
+}
+
+@font-face {
+    font-family: "Brandon Italic";
     src: url("../fonts/Brandon/HVD\ Fonts\ -\ BrandonText-RegularItalic.otf");
 }
 
 @font-face {
     font-family: "Pradell";
     src: url("../fonts/Pradell/Typerepublic\ -\ Pradell.otf");
+}
+
+@font-face {
+    font-family: "Pradell Italic";
+    src: url("../fonts/Pradell/Typerepublic\ -\ Pradell-Italic.otf");
 }
 
 @font-face {
@@ -65,6 +77,16 @@ $transition: (
     src: url("../fonts/LibreBaskerville-Italic.ttf");
 }
 
+.Brandon-font-italic {
+    font: 28px/26px "Brandon Italic" !important;
+}
+
+.Libre-font-italic {
+    font: 16px/26px "Libre Baskerville Italic" !important;
+}
+
+// variable overrides 
+$input-placeholder-color: darkgray;
 // 0.2 Import Bootstrap and its default variables
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
@@ -73,7 +95,50 @@ $transition: (
 
 // 03. Your Styles
 
+// FONT CLASSES
+
+.Pradell-Regular {
+    font-family: "Pradell";
+}
+
+.Pradell-Bold {
+    font-family: "Pradell Bold";
+}
+
+.Pradell-Italic {
+    font-family: "Pradell Italic";
+}
+
+.Brandon-Regular {
+    font-family: "Brandon Regular";
+}
+
+.Brandon-Light {
+    font-family: "Brandon Light";
+}
+
+.Brandon-Medium {
+    font-family: "Brandon Medium";
+}
+
+.Brandon-Bold {
+    font-family: "Brandon Bold";
+}
+
+.Brandon-Italic {
+    font-family: "Brandon Italic";
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+
 /*************** GENERAL ********************/
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: sans-serif;
 }
@@ -88,6 +153,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
     background-color: $gray-600;
+}
+
+.img-responsive {
+    height: 100%;
+    width: 100%;
 }
 
 a,
@@ -134,6 +204,8 @@ img {
         overflow-x: initial !important;
     }
 }
+
+
 
 #main-header {
     background: $black;
@@ -370,7 +442,7 @@ img {
         // Search 
         .search-blk {
             background-color: rgba(197, 197, 193, 0.2);
-            font: 14px "Brandon Regular Italic";
+            font: 14px "Brandon Italic";
             margin: 0 25px;
             padding: 0 5px;
             color: $white;
@@ -641,7 +713,7 @@ img {
     .arrow-fixed {
         position: fixed;
         right: 40px;
-        z-index: 3;
+        z-index: 4;
 
         @media (max-width: 1200px) {
             right: 25px;
@@ -672,7 +744,7 @@ img {
             }
 
             @media (max-width: 1700px) {
-                width: 85px;
+                width: 68px;
             }
         }
 
@@ -695,11 +767,12 @@ img {
 
             span {
                 display: block;
-                letter-spacing: 0.3;
+                letter-spacing: 0.5;
 
                 &:first-child {
                     font: 15px "Brandon Bold";
                     position: relative;
+                    padding-bottom: 0px;
 
                     @media (min-width: 1860px) {
                         font: 26px "Brandon Bold";
@@ -711,7 +784,7 @@ img {
                         max-width: 130px;
                         height: 2px;
                         display: block;
-                        margin: 4px auto;
+                        margin: 3px auto 5.5px auto;
                         background-color: $white;
                     }
                 }
@@ -746,7 +819,7 @@ img {
                 span {
                     &:first-child {
                         &::after {
-                            height: 2.5px;
+                            height: 2px;
                             width: 50%;
                         }
                     }
@@ -756,7 +829,7 @@ img {
             .cta-2 {
                 background-color: map-get($theme-colors, primary);
                 border: 2px solid $white;
-                padding: 5px;
+                padding: 3px 7px 6px;
                 margin: 10px 0;
                 position: absolute;
                 letter-spacing: 1;
@@ -783,15 +856,15 @@ img {
 
             .cta-3 {
                 background-color: $white;
-                border-top: 1px solid $black;
-                border-bottom: 1px solid $black;
-                padding: 5px;
+                border-top: 2px solid $black;
+                border-bottom: 2px solid $black;
+                padding: 3px 5px;
                 margin: 10px 0;
                 position: absolute;
                 top: calc(100% - 150px);
                 cursor: pointer;
                 z-index: 4;
-                right: 85px;
+                right: 50px;
 
                 @media (min-width: 1860px) {
                     bottom: 45px;
@@ -827,6 +900,7 @@ img {
                 span {
                     font: 16px "Brandon Bold";
                     letter-spacing: 0;
+                    line-height: 1.2 !important;
 
                     @media (min-width: 1860px) {
                         font: 26px "Brandon Bold";
@@ -839,6 +913,7 @@ img {
             }
         }
     }
+
 
     .fade-animate {
         opacity: 1;
@@ -853,7 +928,8 @@ img {
         text-align: center;
 
         img {
-            height: 47px;
+            height: 45px;
+            object-fit: contain;
         }
 
         &::after {
@@ -873,6 +949,10 @@ img {
             &.truncated {
                 overflow: hidden;
                 text-overflow: ellipsis;
+            }
+
+            pre {
+                white-space: pre-wrap;
             }
         }
 
@@ -903,7 +983,7 @@ img {
             }
 
             .link-to {
-                color: map-get($theme-colors, dark_red);
+                color: map-get($theme-colors, dark-red);
             }
         }
     }
@@ -937,7 +1017,7 @@ img {
     }
 
     .Brandon-font-bold {
-        font: 18px "Brandon Bold";
+        font: 16px "Brandon Bold";
 
         @media (max-width: 1199.9px) {
             font: 15px "Brandon Bold";
@@ -945,6 +1025,30 @@ img {
 
         @media (min-width: 1860px) {
             font: 20px "Brandon Bold";
+        }
+    }
+
+    .Brandon-font {
+        font: 16px "Brandon Regular";
+
+        @media (max-width: 1199.9px) {
+            font: 15px "Brandon Regular";
+        }
+
+        @media (min-width: 1860px) {
+            font: 21px "Brandon Regular";
+        }
+    }
+
+    .Brandon-light {
+        font: 16px "Brandon Light";
+
+        @media (max-width: 1199.9px) {
+            font: 15px "Brandon Light";
+        }
+
+        @media (min-width: 1860px) {
+            font: 20px "Brandon Light";
         }
     }
 
@@ -978,8 +1082,8 @@ img {
             }
 
             img {
-                height: 100%;
-                max-height: 75vh;
+                // height: 100%;
+                // max-height: 75vh;
                 object-fit: contain;
                 width: 100%;
                 display: block;
@@ -1149,27 +1253,33 @@ img {
                     &:nth-of-type(odd) {
                         margin-right: 20px;
                     }
-                }
 
-                @media (max-width: 1100px) {
-                    .grid-col {
+                    @media (max-width: 1100px) {
                         margin-top: 10px;
 
                         &:nth-of-type(odd) {
                             margin-right: 10px;
                         }
                     }
-                }
 
-                @media (min-width: 1860px) {
-                    .grid-col {
+                    @media (min-width: 1860px) {
                         margin-top: 38px;
 
                         &:nth-of-type(odd) {
                             margin-right: 38px;
                         }
                     }
+
+                    @media (min-width:1200px) {
+
+                        &:first-child,
+                        &:nth-child(2) {
+                            margin-top: 0;
+                        }
+                    }
                 }
+
+
             }
 
             @media (max-width: 1100px) {
@@ -1185,7 +1295,8 @@ img {
             }
 
             @media (min-width: 1860px) {
-                flex: 0 0 894px;
+                flex: 0 0 48vw;
+                min-width: 894px;
             }
 
             .grid-col {
@@ -1249,7 +1360,7 @@ img {
         }
 
         .col-menu {
-            padding-top: 70px;
+            padding-top: 40px;
             text-align: center;
             flex: 0 0 20%;
 
@@ -1262,7 +1373,8 @@ img {
             }
 
             @media (min-width: 1400px) {
-                flex: 0 0 295px;
+                flex: 0 0 15.9vw;
+                min-width: 295px;
             }
 
             .project-map {
@@ -1329,7 +1441,7 @@ img {
                     @media (max-width: 1100px) {
                         font: 11px "Brandon Medium";
                         padding: 0 10px;
-                        // height: 45px;
+                        // height: 45px; 
                     }
 
                     @media (min-width: 1400px) {
@@ -1436,12 +1548,13 @@ img {
                                 width: 470px;
                             }
 
-                            @media (min-width: 1860px) {
-                                width: 698px;
+                            @media (min-width: 1400px) {
+                                min-width: 698px;
+                                width: 38vw;
                             }
 
                             .details-wrapper {
-                                padding: 15px 35px 15px 20px;
+                                padding: 15px 55px 15px 20px;
                                 background-color: $white;
                                 margin-bottom: 20px;
 
@@ -1450,7 +1563,7 @@ img {
                                 }
 
                                 @media (max-width: 1400px) {
-                                    padding-right: 30px;
+                                    padding-right: 50px;
                                 }
 
                                 @media (max-width: 1100px) {
@@ -1458,7 +1571,7 @@ img {
                                 }
 
                                 @media (min-width: 1860px) {
-                                    padding-right: 43px;
+                                    padding-right: 90px;
                                 }
                             }
                         }
@@ -1498,9 +1611,10 @@ img {
             }
 
             @media (min-width: 1860px) {
-                padding-top: 50px;
+                padding-top: 20px;
                 font: 20px/24px "Pradell";
-                flex: 0 0 350px;
+                flex: 0 0 18.9vw;
+                min-width: 350px;
 
                 .text-wrapper {
                     &.truncated {
@@ -1512,6 +1626,8 @@ img {
             .title {
                 font: 19px/38px "Brandon Bold";
                 padding: 0 20px;
+                max-width: 350px;
+                margin: auto;
 
                 @media (min-width: 1860px) {
                     font: 26px/38px "Brandon Bold";
@@ -1568,8 +1684,12 @@ img {
                 right: 15px;
                 top: 30px;
 
-                @media (min-width: 1440px) {
+                @media (min-width: 1700px) {
                     min-width: 235px;
+                }
+
+                @media (min-width: 1440px) {
+
                     right: 40px;
                 }
             }
@@ -1626,6 +1746,11 @@ img {
                 top: 145px;
                 cursor: pointer;
                 z-index: 4;
+                display: block;
+
+                @media (min-width: 1200px) {
+                    display: none;
+                }
 
                 @media (min-width: 1440px) {
                     right: 35px;
@@ -1641,10 +1766,14 @@ img {
             }
 
             .cta-3 {
-                min-width: 140px;
+                min-width: 160px;
                 min-height: fit-content;
                 top: 30px;
                 right: 15px;
+
+                @media (min-width: 1700px) {
+                    min-width: 235px;
+                }
 
                 @media (min-width: 1440px) {
                     right: 40px;
@@ -1657,10 +1786,32 @@ img {
                 }
             }
         }
+
+        .col-menu {
+            position: relative;
+
+            .call-to-actions-items {
+                height: fit-content;
+            }
+
+            .cta-logo {
+                display: none;
+                top: -12px;
+                right: initial;
+                left: 96%;
+
+                @media (min-width: 1200px) {
+                    display: block;
+                }
+            }
+        }
     }
 
-    // End projects // ex: la matcha
+
+
 }
+
+
 
 .modal-backdrop {
     background-color: transparent;
@@ -1701,7 +1852,7 @@ img {
     img {
         display: block;
         width: 100%;
-        height: 100%;
+        height: auto;
         border: 20px solid $white !important;
 
         @media (max-width: 1800px) {
@@ -1866,7 +2017,7 @@ img {
     #main-home .call-to-actions-items {
         .cta-1 {
             right: 20px !important;
-            padding: 3px 15px !important;
+            padding: 5px 15px !important;
         }
 
         .cta-2 {
@@ -1877,16 +2028,21 @@ img {
             top: calc(100% - 30vh) !important;
             right: 20px !important;
         }
+
+        span:first-child::after {
+            margin: 3px auto 6px auto !important;
+            height: 1px !important;
+        }
     }
 
     #main-content {
         .arrow-fixed {
             top: initial !important;
             right: 20px !important;
-            bottom: 60px;
+            bottom: 35px;
 
             img {
-                width: 85px !important;
+                width: 68px !important;
             }
         }
 
@@ -1917,7 +2073,7 @@ img {
                 .text-overlay {
                     font: 22px/32px "Libre Baskerville Italic" !important;
 
-                    margin: 0 auto 35px!important;
+                    margin: 0 auto 35px !important;
                     max-width: 450px !important;
 
                     p {
@@ -1941,7 +2097,7 @@ img {
         // La Rutas tablets & Mobile
         #main-rutas {
             flex-direction: column;
-            padding: 35px 30px 70px !important;
+            padding: 35px 30px 80px !important;
             max-width: 615px;
             margin: auto;
 
@@ -1959,7 +2115,7 @@ img {
                     padding-bottom: 0 !important;
 
                     img {
-                        height: 35px;
+                        height: 37px;
                     }
 
                     &::after {
@@ -2004,6 +2160,7 @@ img {
         .col-text {
             .text-controls {
                 font: 22px/32px "Brandon Medium" !important;
+                margin-bottom: 30px;
 
                 &::before {
                     width: 130px !important;
@@ -2013,19 +2170,20 @@ img {
 
         // La Matcha tablets & Mobile
         .main-projects {
-            padding: 35px 30px !important;
+            padding: 35px 30px 150px !important;
             flex-wrap: wrap;
 
             .col-mobile {
                 flex: initial;
-                height: fit-content;
+                height: max-content;
 
                 .fleuron-wrap {
                     img {
-                        height: 35px;
+                        height: 37px;
 
                     }
-                    &::after{
+
+                    &::after {
                         height: 3px;
                     }
                 }
@@ -2062,6 +2220,7 @@ img {
                 .cta-1 {
                     min-width: 180px !important;
                     right: 20px !important;
+                    // top: 30px !important;
                 }
 
                 .cta-2,
@@ -2116,7 +2275,7 @@ img {
                                 padding: 0 !important;
 
                                 .details-wrapper {
-                                    padding: 14px 18px 20px !important;
+                                    padding: 20px 14px !important;
                                 }
                             }
                         }
@@ -2175,6 +2334,7 @@ img {
             }
         }
 
+
         #GalleryModal img {
             border-width: 5px !important;
         }
@@ -2185,18 +2345,22 @@ img {
 @media (min-width: 767.9px) and (max-width: 1199.9px) {
     .main-projects {
         column-gap: 0 !important;
-        .col-mobile{
+
+        .col-mobile {
             flex: 0 0 100% !important;
-            .project-map{
+
+            .project-map {
                 display: none !important;
-            } 
+            }
+
             .text-overlay {
-                margin: 10px auto 25px; 
+                margin: 10px auto 25px;
                 max-width: 615px;
             }
 
             .fleuron-wrap {
                 max-width: 280px;
+
                 img {
                     height: 35px !important;
                 }
@@ -2211,6 +2375,7 @@ img {
                 font: 25px/38px "Brandon Bold" !important;
             }
         }
+
         .col-imgs-grid {
             .grid-col {
                 height: 280px !important;
@@ -2233,9 +2398,11 @@ img {
             top: 120px !important;
         }
 
+
         .col-menu {
             padding-top: 50px !important;
             margin-top: -210px;
+
             .project-menu {
                 min-width: 260px;
 
@@ -2257,6 +2424,7 @@ img {
             margin-top: 20px;
         }
     }
+
 
     #GalleryModal .modal-dialog {
         max-width: 80% !important;
@@ -2281,6 +2449,7 @@ img {
         }
     }
 
+
 }
 
 // small Tablet
@@ -2295,24 +2464,7 @@ img {
 
 // mobile screen
 @media (max-width: 767.9px) {
-    #main-header {
-        .navbar {
-            .social-menu {
-                width: 25%;
-                min-width: fit-content;
-                margin: 0 !important;
-                justify-content: end;
 
-                li:not(:last-child) {
-                    margin-right: 0.9rem !important;
-                }
-
-                img {
-                    width: 22px;
-                }
-            }
-        }
-    }
 
     #main-content {
         #main-home {
@@ -2328,7 +2480,7 @@ img {
                 }
             }
         }
-  
+
         // Hola mobile
         .main-hola {
             >img {
@@ -2361,10 +2513,10 @@ img {
             }
         }
     }
+
     .main-projects {
-        flex-direction: column;
-        padding: 40px 22px !important;
-        flex-wrap: initial !important;
+        display: block !important; 
+        padding: 40px 22px !important; 
 
         .col-menu {
             order: 3 !important;
@@ -2390,9 +2542,9 @@ img {
         .call-to-actions-items {
             .cta-logo {
                 width: 50px !important;
-                left: 20px;
+                left: 15vw;
                 right: initial !important;
-                top: 110px !important;
+                // top: 110px !important;
             }
         }
 
@@ -2404,6 +2556,7 @@ img {
             }
         }
     }
+
 
     .modal-dialog {
         margin: auto !important;
@@ -2425,6 +2578,21 @@ img {
 @media (max-width: 580px) {
     #main-header {
         .navbar {
+            .social-menu {
+                width: 25%;
+                min-width: fit-content;
+                margin: 0 !important;
+                justify-content: end;
+
+                li:not(:last-child) {
+                    margin-right: 0.9rem !important;
+                }
+
+                img {
+                    width: 22px;
+                }
+            }
+
             .navbar-brand {
                 font: 1.5rem/1.24 "Brandon Bold" !important;
                 margin: initial !important;
@@ -2481,7 +2649,7 @@ img {
                     }
 
                     &::after {
-                        margin: 3px auto 6px !important;
+                        margin: 3px auto 5px !important;
                         height: 1.6px !important;
                     }
                 }
@@ -2489,7 +2657,7 @@ img {
                 .cta-1 {
                     right: 20px !important;
                     border-width: 1.5px;
-                    padding: 3px 10px;
+                    padding: 4px 12px !important;
 
                     span:first-child {
                         &::after {
@@ -2502,13 +2670,15 @@ img {
                     right: 33px !important;
                     border-width: 1.5px;
                     line-height: 1;
+                    padding: 5px 5px 5px;
 
                     span:first-child {
                         line-height: 1;
 
                         &::after {
                             width: 70%;
-                            margin: 4px auto !important;
+                            // height : 1px !important;  
+                            margin: 5px auto 4px !important;
                         }
                     }
                 }
@@ -2537,10 +2707,11 @@ img {
             }
         }
 
+
         #main-home {
             .call-to-actions-items {
                 .cta-3 {
-                    right: 30px !important;
+                    right: 20px !important;
                 }
             }
 
@@ -2617,8 +2788,13 @@ img {
                     width: auto !important;
                     min-width: auto !important;
                 }
+
+                .cta-logo {
+                    left: 10vw !important;
+                }
             }
         }
+
 
         .arrow-fixed {
             right: 30px !important;
@@ -2636,8 +2812,12 @@ img {
             font: 18px/22px "Brandon Bold" !important;
         }
 
+        .Brandon-font {
+            font: 18px/22px "Brandon Regular" !important;
+        }
+
         .fleuron-wrap {
-            margin-top: 5px;
+            margin-top: 0px;
             margin-bottom: 15px;
 
             img {
@@ -2656,6 +2836,8 @@ img {
                 font: 18px/24px "Pradell" !important;
             }
         }
+
+
     }
 }
 
@@ -2725,7 +2907,7 @@ img {
                 width: 1.3em !important;
             }
         }
-    }
+    } 
 
     #main-content {
 
@@ -2746,6 +2928,10 @@ img {
 
         .Brandon-font-bold {
             font: 16px "Brandon Bold" !important;
+        }
+
+        .Brandon-font {
+            font: 16px "Brandon Regular" !important;
         }
 
         .fleuron-wrap {
@@ -2798,8 +2984,9 @@ img {
                 }
 
                 .cta-logo {
-                    width: 33px !important;
-                    left: 5px !important;
+                    width: 38px !important;
+                    left: 5vw !important;
+                    height: auto;
                 }
 
                 .cta-1,
@@ -2825,4 +3012,649 @@ img {
             }
         }
     }
+}
+
+// Small mobile screen
+@media (max-width: 380px) {
+
+    //header
+    #main-header {
+        padding: 0 10px !important;
+
+        .navbar {
+            .navbar-brand {
+                font: 1.1rem/1.2 "Brandon Bold" !important;
+            }
+
+            .social-menu {
+                img {
+                    width: 20px !important;
+                }
+            }
+
+            .search-blk {
+                .search-mobile {
+                    width: 22px;
+                }
+            }
+
+            .navbar-toggler-icon {
+                width: 1.1em !important;
+            }
+        }
+    }
+
+    #main-content {
+
+        // Shared Layout
+
+
+
+        // Projects Page ex:la mancha
+        .main-projects {
+
+            padding: 25px 20px 110px !important;
+
+            .col-mobile {
+
+                .title {
+                    font: 17px/30px "Brandon Bold";
+                    max-width: 215px;
+                }
+
+                .fleuron-wrap {
+                    &::after {
+                        margin-top: 15px;
+                    }
+
+                    img {
+                        height: 28px;
+                    }
+                }
+
+                .project-map {
+                    width: 85px;
+                }
+            }
+
+            .call-to-actions-items {
+                span:first-child {
+                    font: 9px "Brandon Bold";
+
+                    &::after {
+                        margin: 3px auto 3px !important;
+                    }
+
+                }
+
+                span:last-child {
+                    font: 7px "Pradell" !important;
+                }
+
+                .cta-1 {
+                    padding: 3px 5px !important;
+                }
+
+            }
+
+            .col-imgs-grid {
+                .imgs-grid-wrapper {
+                    .grid-col {
+                        flex: 0 0 calc(80% - 5px) !important;
+                        height: 245px !important;
+
+                        &:not(:last-child) {
+                            margin-right: 25px;
+                        }
+                    }
+                }
+            }
+
+            .col-menu {
+                .project-menu {
+                    max-width: 100% !important;
+                    min-width: auto !important;
+
+                    &>li {
+                        font: 13px "Brandon Medium" !important;
+                    }
+
+                    .details {
+                        left: -4% !important;
+                        width: 108% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+////////////////////////////////////// New  ///////////////////////////////////////////// 
+/// 
+/* layout */
+.dark_bg {
+    background-color: black !important;
+}
+
+.dark_l {
+    background-color: black !important;
+    color: white !important;
+}
+
+.dark_l .fleuron-wrap::after,
+.dark_l .col-text .text-controls::before {
+    background-color: white !important;
+}
+
+#main-content pre {
+    white-space: pre-wrap;
+}
+
+.half-col {
+    width: 50%;
+}
+
+.sig-img {
+    width: 70%;
+    height: auto;
+}
+
+.float-left {
+    float: left;
+}
+
+.underlined-link {
+    color: black;
+    text-decoration: underline;
+}
+
+.underlined-link:active,
+.underlined-link:focus,
+.underlined-link:hover {
+    text-decoration: underline;
+}
+
+#main-content .main-basic {
+    display: flex;
+    min-height: calc(100% - 46px);
+    padding: 53px;
+    padding-right: 0;
+
+    a {
+        color: black;
+    }
+
+
+    .col-text {
+        font: 16px/23px "Pradell";
+        position: relative;
+        // height: 794px;
+        height: fit-content;
+        flex: 0 0 415px;
+        padding: 32.5px;
+
+        margin: 0 auto;
+        background-color: white;
+        // padding-bottom: 0px;  
+
+
+        .text-wrapper {
+            >* {
+                margin-bottom: 0;
+            }
+
+            &.truncated {
+                max-height: 483px;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            font: 15px/23px "Pradell";
+
+            // .text-wrapper {
+            //     &.truncated {
+            //         max-height: calc(23px * 18.5);
+            //     }
+            // }
+        }
+
+        @media (min-width: 1860px) {}
+
+        .title {
+
+            font: 22px/38px "Brandon Bold";
+            padding: 0 20px;
+            letter-spacing: 0px;
+            margin-bottom: 22px;
+            margin-top: 22px;
+
+            @media (min-width: 1860px) {
+                // font: 26px/38px "Brandon Bold";
+                // padding: 0 25px;
+            }
+        }
+
+        .text-overlay {
+            .fleuron-wrap {
+                padding-bottom: 0px !important;
+                margin-bottom: 0;
+                margin: 0px auto;
+
+                &::after {
+                    height: 4px;
+                }
+
+                img {
+                    // @media (max-width: 1440px) {
+                    //     width: 32px;  
+                    //     height: auto;
+                    // }
+                }
+            }
+        }
+
+        .Pradell-font {
+            font: 21px/26px "Pradell";
+        }
+    }
+
+    .arrow-fixed {
+        @media (min-width: 1860px) {
+            right: 50px;
+        }
+
+        a {
+            display: block;
+
+            &.prev {
+                transform: scale(-1, 1);
+            }
+
+            img {
+                filter: invert(23%);
+                height: auto;
+
+                &:hover {
+                    filter: invert(50%);
+                }
+            }
+        }
+    }
+
+    .mobile-cover {
+        display: none;
+    }
+
+    // Protagonistas Grid
+    .grid-shell {
+        width: 894px;
+        height: 794px;
+        margin-right: 0px;
+
+        .grid-cont {
+            grid-template-columns: 1fr 1fr 1fr;
+            display: grid;
+            grid-gap: 70px;
+            width: fit-content;
+            padding: 0;
+
+
+
+            .section {
+                position: relative;
+                height: 324px;
+                width: 306px;
+                max-width: 306px;
+
+                img {
+                    z-index: 0;
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                }
+
+                .section-cont {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    top: 0;
+                    height: 100%;
+                    width: 100%;
+                    padding: 16px;
+                    padding-bottom: 0px;
+                    opacity: 0;
+                    transition: 0.3s ease;
+                    background-color: rgb(96, 56, 19, 0.44);
+
+                    .block-text {
+                        position: relative;
+                        margin: 0;
+                        letter-spacing: 0.8px;
+                        font: 16px/22px "Pradell SemiBold";
+                        overflow: hidden;
+                        color: white;
+                        z-index: 1;
+                    }
+
+                    .block-title {
+                        font: 17px/23px "Brandon Medium";
+                        padding-bottom: 11px;
+
+                        &::after {
+                            content: "";
+                            width: 99px;
+                            height: 3.2px;
+                            margin-top: 11px;
+                            display: block;
+                            background-color: #fff;
+                        }
+                    }
+
+
+
+                }
+
+                &:hover .section-cont {
+                    opacity: 1;
+                    cursor: default;
+                }
+            }
+
+        }
+    }
+
+    /////////////////////////// MEDIA Q
+
+    /* Med computer */
+    @media (max-width: 1859px) and (min-width: 1700px) {
+        padding-right: 0px;
+
+        .col-text {
+            left: 0;
+        }
+
+        .grid-shell .grid-cont {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-gap: 70px;
+            margin: auto;
+            margin-left: 0;
+
+            .section {
+                height: 330px;
+                max-width: 280px;
+                width: 30vw;
+            }
+        }
+
+        .arrow-fixed img {
+            width: 95px;
+        }
+
+    }
+
+    /* Small computer */
+    @media (max-width: 1700px) and (min-width: 1199.9px) {
+        padding-right: 150px;
+
+        .col-text {
+            left: 0;
+        }
+
+        .arrow-fixed img {
+            width: 95px;
+        }
+
+        .grid-shell .grid-cont {
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 3.5vw;
+            margin: auto;
+
+            .section {
+                height: 350px;
+                max-width: 300px;
+                width: 30vw;
+            }
+        }
+
+
+    }
+
+    /* Tablets & mobile style */
+    @media (max-width: 1199.9px) {
+
+
+        & {
+            padding: 40px;
+            // padding: 35px 45px 100px !important;
+            flex-wrap: wrap;
+        }
+
+        .col-text .text-overlay .fleuron-wrap {
+            margin: 0 auto;
+            margin-top: 20px;
+
+            img {
+                height: 37px;
+            }
+
+            &::after {
+                height: 3px;
+                margin: 23px auto 0;
+            }
+        }
+
+        .grid-shell {
+            display: none;
+            order: 3;
+            max-width: 100%;
+            margin-right: 0px;
+
+            //protagonists
+            .grid-cont {
+                grid-gap: 50px;
+                margin: auto;
+                grid-template-columns: 1fr 1fr;
+
+                .section {
+                    height: 330px;
+                }
+            }
+
+            //basic
+
+
+        }
+
+
+        .col-text {
+            flex: initial;
+            position: relative;
+            flex: 0 0 100%;
+            margin: 0 auto;
+            left: 0;
+            order: 2;
+            padding-top: 0px;
+            padding: 16px;
+
+            .Pradell-font {
+                font: 20px/29px "Pradell";
+            }
+
+            .title {
+                font: 15px "Brandon Bold";
+                padding: 0 25px;
+                letter-spacing: 0.8px;
+                margin-bottom: 24px;
+                margin-top: 12px;
+            }
+
+            .mobile-cover {
+                display: block;
+                height: 310px;
+                margin-bottom: 22px;
+            }
+
+            .text-overlay .fleuron-wrap {
+                margin-top: 0;
+                padding-bottom: 25px;
+            }
+
+            .section-overlay {
+                .text-overlay {
+
+                    .title {
+                        font: 19px/35px "Brandon Bold";
+                    }
+
+
+
+                }
+            }
+        }
+
+
+        .section-overlay {
+            margin-top: 0px;
+        }
+
+
+        .text-controls {
+            margin-bottom: 45px;
+            margin-top: 32px;
+
+        }
+
+
+    }
+
+    /* Tablets */
+    @media (min-width: 767.9px) and (max-width: 1199.9px) {
+
+        .col-text {
+            .text-overlay {
+
+
+                .fleuron-wrap {
+                    max-width: 280px;
+
+
+                    &::after {
+                        width: 130px;
+                        height: 3px;
+                    }
+                }
+
+                .title {
+                    font: 25px/38px "Brandon Bold";
+                }
+            }
+        }
+
+
+
+
+    }
+
+    /* Meduim Tablet */
+    @media (min-width: 767.9px) and (max-width: 991.9px) {}
+
+    /* small Tablet */
+    @media (min-width: 767.9px) and (max-width: 800px) {}
+
+    /* mobile screen */
+    @media (max-width: 767.9px) {
+        flex-direction: column;
+        padding: 28px 22px 100px;
+        flex-wrap: initial;
+
+        .grid-shell {
+            .grid-cont {
+                grid-template-columns: 1fr 1fr;
+                margin: auto;
+                grid-gap: 20px;
+
+                .section {
+                    height: 330px;
+                    width: 45vw;
+                }
+            }
+        }
+
+        .section-overlay {
+            .text-overlay {
+
+                .title {
+                    font: 20px/43px "Brandon Bold";
+                }
+
+            }
+        }
+
+
+        .col-text {
+            max-width: 70%;
+
+            .Pradell-font {
+                font: 20px/28px "Pradell" !important;
+            }
+
+            .text-overlay .fleuron-wrap {
+                margin-bottom: 20px;
+            }
+
+            .text-controls {
+                font: 17px/26px "Brandon Medium";
+                margin-bottom: 32px;
+
+                &::before {
+                    margin: 0 auto 32px;
+                }
+            }
+
+        }
+
+    }
+
+    /* meduim mobile screen */
+    @media (max-width: 580px) {
+        .grid-shell {
+            .grid-cont {
+                grid-template-columns: 1fr;
+
+                .section {
+                    width: 75vw;
+                }
+            }
+        }
+
+
+        .col-text {
+            max-width: 100%;
+
+            .section-overlay {
+                .text-overlay {
+
+                    .title {
+                        font: 20px/35px "Brandon Bold";
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    /* Small mobile screen */
+    @media (max-width: 425px) {}
+
+    /* Small mobile screen */
+    @media (max-width: 380px) {
+        .grid-shell .grid-cont .section .section-cont .block-text {
+            font: 15px/22px "Pradell SemiBold";
+        }
+    }
+
+    // End projects // ex: la matcha
 }
